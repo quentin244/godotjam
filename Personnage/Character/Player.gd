@@ -1,8 +1,8 @@
-extends Area2D
+extends KinematicBody2D
 
 signal hit
 
-export (int) var SPEED
+var SPEED = 500
 var velocity = Vector2()
 var screensize
 

@@ -1,0 +1,64 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Character/Player.gd" type="Script" id=1]
+[ext_resource path="res://assets/Down1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Down2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Down3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Right1.png" type="Texture" id=5]
+[ext_resource path="res://assets/Right2.png" type="Texture" id=6]
+[ext_resource path="res://assets/Right3.png" type="Texture" id=7]
+[ext_resource path="res://assets/Left1.png" type="Texture" id=8]
+[ext_resource path="res://assets/Left2.png" type="Texture" id=9]
+[ext_resource path="res://assets/Left3.png" type="Texture" id=10]
+[ext_resource path="res://assets/Up1.png" type="Texture" id=11]
+[ext_resource path="res://assets/Up2.png" type="Texture" id=12]
+[ext_resource path="res://assets/Up3.png" type="Texture" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "left",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "up",
+"speed": 5.0
+} ]
+
+[node name="Player" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 2, -1 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "right"
+frame = 1
+_sections_unfolded = [ "Material", "Pause", "Region", "Transform", "Visibility", "Z", "Z Index" ]
+
+[node name="StartPosition" type="Position2D" parent="." index="1"]
+
+position = Vector2( 240, 450 )
+_sections_unfolded = [ "Transform" ]
+
+
