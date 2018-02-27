@@ -1,6 +1,5 @@
 extends "res://characters/character.gd"
 
-
 export(int) var patrol_distance = 200
 var start_position = Vector2()
 var end_position = Vector2()
@@ -13,12 +12,13 @@ var previous_mind_state = null
 
 
 func _ready():
-	$Health.free()
+	$Wesh.hide()
+	#$Health.free()
 	$WeaponPivot.free()
 	$Timer.connect('timeout', self, '_on_WaitTimer_timeout')
 
 	# Disabling collisions
-	$CollisionShape2D.disabled = true
+	$CollisionShape2D.disabled = false
 
 	max_speed = 240
 	start_position = position
@@ -59,3 +59,15 @@ func _change_mind_state(new_state):
 func _on_WaitTimer_timeout():
 	_change_mind_state(MIND_MOVE)
 
+
+func _on_Area2D_body_entered( body ):
+	if not body.is_in_group('character'):
+		return
+	$Wesh.show()
+	print("dong")
+
+func _on_Area2D_body_exited( body ):
+	if not body.is_in_group('character'):
+			return
+	$Wesh.hide()
+	print("ding")
