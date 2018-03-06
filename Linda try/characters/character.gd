@@ -57,24 +57,86 @@ var weapon_path = "res://characters/weapon/Sword.tscn"
 var weapon = null
 
 
-#func _ready():#
-	#_change_state(IDLE)
-	#$AnimationPlayer.connect('animation_finished', self, '_on_AnimationPlayer_animation_finished')
+func _ready():
+	_change_state(IDLE)
+	$AnimationPlayer.connect('animation_finished', self, '_on_AnimationPlayer_animation_finished')
 	#$Tween.connect('tween_completed', self, '_on_Tween_tween_completed')
-	#$Health.connect('health_changed', self, '_on_Health_health_changed')
+	$Health.connect('health_changed', self, '_on_Health_health_changed')
 
-	#for gap in get_tree().get_nodes_in_group('gap'):
-		#gap.connect('body_fell', self, '_on_Gap_body_fell')
+	for gap in get_tree().get_nodes_in_group('gap'):
+		gap.connect('body_fell', self, '_on_Gap_body_fell')
 
-	#if not weapon_path:
-	#	return
-	#var weapon_instance = load(weapon_path).instance()
-	#$WeaponPivot/WeaponSpawn.add_child(weapon_instance)
-	#weapon = $WeaponPivot/WeaponSpawn.get_child(0)
-	#weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
+	if not weapon_path:
+		return
+	var weapon_instance = load(weapon_path).instance()
+	$WeaponPivot/WeaponSpawn.add_child(weapon_instance)
+	weapon = $WeaponPivot/WeaponSpawn.get_child(0)
+	weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
 
 
+func _change_state(new_state):
+	match state:
+		FALL:
+			$CollisionShape2D.disabled = false
+		STAGGER:
+			$BodyPivot/Body.modulate = Color('#fff')
+		ATTACK:
+			set_physics_process(true)
 
+	# Initialize the new state
+	match new_state:
+		SPAWN:
+			$Tween.interpolate_property(self, 'scale', scale, Vector2(1,1), .4, Tween.TRANS_QUAD, Tween.EASE_IN)
+			$Tween.start()
+		IDLE:
+			speed = 0
+			$AnimationPlayer.play('idle')
+		MOVE:
+			speed = 200
+			$AnimationPlayer.play('walk')
+		JUMP:
+			air_speed = speed
+			max_air_speed = max_speed
+			air_velocity = velocity if input_direction else Vector2()
+			$AnimationPlayer.play('idle')
+
+			$Tween.interpolate_method(self, '_animate_jump_height', 0, 1, JUMP_DURATION, Tween.TRANS_LINEAR, Tween.EASE_IN)
+			$Tween.start()
+		BUMP:
+			$AnimationPlayer.stop()
+
+			$Tween.interpolate_property(self, 'position', position, position + BUMP_DISTANCE * -last_move_direction, BUMP_DURATION, Tween.TRANS_LINEAR, Tween.EASE_IN)
+			$Tween.interpolate_method(self, '_animate_bump_height', 0, 1, BUMP_DURATION, Tween.TRANS_LINEAR, Tween.EASE_IN)
+			$Tween.start()
+		FALL:
+			$CollisionShape2D.disabled = true
+			$Tween.interpolate_property(self, 'scale', scale, Vector2(0,0), .4, Tween.TRANS_QUAD, Tween.EASE_IN)
+			$Tween.start()
+		ATTACK:
+			set_physics_process(false)
+			if not weapon:
+				print("%s tries to attack but has no weapon" % get_name())
+				_change_state(IDLE)
+				return
+
+			weapon.attack()
+			$AnimationPlayer.play('idle')
+		STAGGER:
+			$Tween.interpolate_property(self, 'position', position, position + knockback * -knockback_direction, STAGGER_DURATION, Tween.TRANS_QUAD, Tween.EASE_OUT)
+			$Tween.start()
+
+			$AnimationPlayer.play('stagger')
+		DIE:
+			# TODO: Add option to queue states so a char dies at the end of STAGGER
+			set_process_input(false)
+			set_physics_process(false)
+			$CollisionShape2D.disabled = true
+			$Tween.stop(self, '')
+			$AnimationPlayer.play('die')
+		DEAD:
+			queue_free()
+	state = new_state
+	emit_signal('state_changed', new_state)
 
 
 func _physics_process(delta):

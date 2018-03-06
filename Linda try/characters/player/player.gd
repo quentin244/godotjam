@@ -1,43 +1,27 @@
-extends KinematicBody2D
+extends "res://characters/character.gd"
 
-signal hit
 
-var SPEED = 500
-var velocity = Vector2()
-var screensize
+func _input(event):
+	if event.is_action_pressed("attack") and not state in [ATTACK, JUMP]:
+		_change_state(ATTACK)
+	elif event.is_action_pressed("throw"):
+		$PebbleSpawner.spawn_pebble()
+	elif event.is_action_pressed("jump"):
+		if not state in [IDLE, MOVE]:
+			return
+		_change_state(JUMP)
 
-func _ready():
-	screensize = get_viewport_rect().size
-	position = $StartPosition.position
-	
-			
-func _process(delta):
-	velocity = Vector2()
-	if Input.is_action_pressed("ui_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("ui_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("ui_down"):
-		velocity.y += 1
-	if Input.is_action_pressed("ui_up"):
-		velocity.y -= 1
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * SPEED
-		$AnimatedSprite.play()
+
+func _physics_process(delta):
+	input_direction = Vector2()
+	input_direction.x = int(Input.is_action_pressed("move_right")) - int(Input.is_action_pressed("move_left"))
+	input_direction.y = int(Input.is_action_pressed("move_down")) - int(Input.is_action_pressed("move_up"))
+
+	if input_direction and input_direction != last_move_direction:
+		$PebbleSpawner.update_position(input_direction)
+		emit_signal('direction_changed', input_direction)
+
+	if Input.is_action_pressed("run"):
+		max_speed = MAX_RUN_SPEED
 	else:
-		$AnimatedSprite.stop()
-		
-	position += velocity * delta
-	position.x = clamp(position.x, 0, screensize.x)
-	position.y = clamp(position.y, 0, screensize.y)
-	
-	if velocity.x >0:
-		$AnimatedSprite.animation = "right"
-		$AnimatedSprite.flip_v = false
-	elif velocity.x < 0:
-		$AnimatedSprite.animation = "left"
-		$AnimatedSprite.flip_v = false
-	elif velocity.y < 0:
-		$AnimatedSprite.animation = "up"
-	elif velocity.y > 0:
-		$AnimatedSprite.animation = "down"
+		max_speed = MAX_WALK_SPEED

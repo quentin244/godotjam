@@ -155,7 +155,8 @@ func _physics_process(delta):
 				_change_state(BUMP)
 			if collider.is_in_group('character'):
 				take_damage(collider, 2)
-
+			if collider.is_in_group('trap'):
+				take_damage(collider, 2)
 	elif state == JUMP:
 		jump(delta)
 
