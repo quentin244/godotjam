@@ -5,7 +5,7 @@
 [ext_resource path="res://herbes.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Personnage/Character/Player.tscn" type="PackedScene" id=4]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 401.312, 599.451 )
 
@@ -61,8 +61,6 @@ position = Vector2( 361.746, 282.984 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Player" parent="YSort/Static" index="4" instance=ExtResource( 4 )]
-
-knockback = 10
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Static/Player" index="2"]
 
