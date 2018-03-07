@@ -16,6 +16,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Map1" type="TileMap" parent="." index="0"]
 
+position = Vector2( 0, 1 )
 z_as_relative = false
 mode = 0
 tile_set = ExtResource( 1 )
@@ -45,9 +46,7 @@ position = Vector2( 950.104, 615.323 )
 position = Vector2( -537.298, -459.954 )
 sort_enabled = true
 
-[node name="Player" parent="YSort" index="0" groups=[
-"player",
-] instance=ExtResource( 3 )]
+[node name="Player" parent="YSort" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 900.71, 596.625 )
 z_index = 1
