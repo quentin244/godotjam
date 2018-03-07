@@ -12,7 +12,7 @@ func _ready():
 
 
 func _on_body_entered(body):
-	if not body.is_in_group('character'):
+	if not body.is_in_group('character') and not body.is_in_group('player') :
 		return
 	overlapping_bodies_ids.append(body)
 
