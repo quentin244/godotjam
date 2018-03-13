@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Dan the Rabbit"
+config/name="Lam"
 run/main_scene="res://Level.tscn"
 config/icon="res://icon.png"
 
