@@ -90,6 +90,8 @@ func set_ready_for_next_attack():
 func _on_body_entered(body):
 	if body.get_rid().get_id() in hit_objects:
 		return
+	if body.is_in_group('trap'):
+		return
 	hit_objects.append(body.get_rid().get_id())
 	body.take_damage(self, attack_current['damage'])
 
