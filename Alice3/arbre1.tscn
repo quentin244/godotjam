@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tilemap/Final/png/arbre1.png" type="Texture" id=1]
+
+[node name="arbre1" type="Sprite"]
+
+position = Vector2( 24.7711, 51.6503 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -4.42631, 41.0946, -5.29903, 44.3673, -5.08085, 46.3309, -1.37179, 48.7309, 4.30089, 47.8582, 4.30089, 43.0582, 3.20999, 39.3491, 0.155472, 39.3491, -2.24451, 39.3491 )
+
+
