@@ -25,3 +25,12 @@ func _physics_process(delta):
 		max_speed = MAX_RUN_SPEED
 	else:
 		max_speed = MAX_WALK_SPEED
+
+	if Input.is_action_pressed("dial"):
+		dial(input_direction)
+		
+func dial(result):
+	for dictionary in result:
+		if typeof(dictionary.collider) == TYPE_OBJECT and dictionary.collider.has_node("Interact"):
+			get_node("Camera2D2/dialoguebox/RichTextLabel").set_hidden(false)
+			get_node("Camera2D2/dialoguebox")._print_dialogue("Hello World")
