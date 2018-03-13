@@ -67,11 +67,7 @@ func _on_Area2D_body_entered( body ):
 		return
 	#$Wesh.show()
 	$BodyPivot/gtfo.show()
+	$Dialog.show()
 	print("dong")
 
 func _on_Area2D_body_exited( body ):
-	if not body.is_in_group('player'):
-			return
-	#$Wesh.hide()
-	$BodyPivot/gtfo.hide()
-	print("ding")

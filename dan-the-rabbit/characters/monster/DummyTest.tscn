@@ -3,7 +3,11 @@
 [ext_resource path="res://characters/monster/DummyTest.png" type="Texture" id=1]
 [ext_resource path="res://characters/shadow.png" type="Texture" id=2]
 
+<<<<<<< HEAD
+[node name="DummyTest" instance=ExtResource( 1 )]
+=======
 [sub_resource type="RectangleShape2D" id=1]
+>>>>>>> a88316e550dc71d4ccead6bb9fd26467529cfc0d
 
 custom_solver_bias = 0.0
 extents = Vector2( 30.5911, 26.3305 )

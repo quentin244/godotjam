@@ -1,14 +1,21 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://environment/tilesets/outdoor.tres" type="TileSet" id=1]
 [ext_resource path="res://environment/Pit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://environment/Rock.tscn" type="PackedScene" id=4]
-[ext_resource path="res://characters/monster/Porcupine.tscn" type="PackedScene" id=5]
-[ext_resource path="res://characters/npc/Npc.tscn" type="PackedScene" id=6]
-[ext_resource path="res://characters/monster/Dummy.tscn" type="PackedScene" id=7]
-[ext_resource path="res://characters/monster/DummyTest.tscn" type="PackedScene" id=8]
-[ext_resource path="res://interface/Bars.gd" type="Script" id=9]
+[ext_resource path="res://dialoguebox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://environment/Rock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/monster/Porcupine.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/npc/Npc.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/monster/Dummy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://characters/monster/DummyTest.tscn" type="PackedScene" id=9]
+[ext_resource path="res://interface/Bars.gd" type="Script" id=10]
+[ext_resource path="res://jack.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="Level" type="Node2D" index="0"]
 
@@ -57,7 +64,7 @@ collision_mask = 1
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 3, 3 )
+zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
@@ -78,67 +85,82 @@ editor_draw_limits = false
 editor_draw_drag_margin = false
 _sections_unfolded = [ "Limit", "Offset", "Smoothing", "Transform" ]
 
+[node name="dialoguebox" parent="YSort/Player/Camera2D2" index="0" instance=ExtResource( 4 )]
+
+visible = false
+margin_left = -927.0
+margin_top = 267.0
+margin_right = 965.0
+margin_bottom = 525.0
+
+[node name="RichTextLabel" parent="YSort/Player/Camera2D2/dialoguebox" index="0"]
+
+margin_left = 227.0
+margin_top = 45.0
+margin_right = 1708.0
+margin_bottom = 218.0
+
 [node name="Static" type="Node2D" parent="YSort" index="1"]
 
 editor/display_folded = true
 position = Vector2( 500.078, 491.455 )
 
-[node name="Rock2" parent="YSort/Static" index="0" instance=ExtResource( 4 )]
+[node name="Rock2" parent="YSort/Static" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 1626.18, 262.87 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock8" parent="YSort/Static" index="1" instance=ExtResource( 4 )]
+[node name="Rock8" parent="YSort/Static" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 146.112, -308.974 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock9" parent="YSort/Static" index="2" instance=ExtResource( 4 )]
+[node name="Rock9" parent="YSort/Static" index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 1432.76, -372.046 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock10" parent="YSort/Static" index="3" instance=ExtResource( 4 )]
+[node name="Rock10" parent="YSort/Static" index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 2084.5, 292.303 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock11" parent="YSort/Static" index="4" instance=ExtResource( 4 )]
+[node name="Rock11" parent="YSort/Static" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 57.8125, 1784.99 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock12" parent="YSort/Static" index="5" instance=ExtResource( 4 )]
+[node name="Rock12" parent="YSort/Static" index="5" instance=ExtResource( 5 )]
 
 position = Vector2( -261.748, -1183.56 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock13" parent="YSort/Static" index="6" instance=ExtResource( 4 )]
+[node name="Rock13" parent="YSort/Static" index="6" instance=ExtResource( 5 )]
 
 position = Vector2( -614.946, -1410.62 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock3" parent="YSort/Static" index="7" instance=ExtResource( 4 )]
+[node name="Rock3" parent="YSort/Static" index="7" instance=ExtResource( 5 )]
 
 position = Vector2( 262.678, 478.76 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock5" parent="YSort/Static" index="8" instance=ExtResource( 4 )]
+[node name="Rock5" parent="YSort/Static" index="8" instance=ExtResource( 5 )]
 
 position = Vector2( 497.823, 896.294 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock6" parent="YSort/Static" index="9" instance=ExtResource( 4 )]
+[node name="Rock6" parent="YSort/Static" index="9" instance=ExtResource( 5 )]
 
 position = Vector2( 1429.36, 870.669 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock7" parent="YSort/Static" index="10" instance=ExtResource( 4 )]
+[node name="Rock7" parent="YSort/Static" index="10" instance=ExtResource( 5 )]
 
 position = Vector2( 1124.88, 332.548 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock4" parent="YSort/Static" index="11" instance=ExtResource( 4 )]
+[node name="Rock4" parent="YSort/Static" index="11" instance=ExtResource( 5 )]
 
 position = Vector2( 728.647, 263.79 )
 scale = Vector2( 0.844736, 0.844736 )
@@ -148,58 +170,58 @@ scale = Vector2( 0.844736, 0.844736 )
 position = Vector2( 555.062, 639.981 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Porcupine3" parent="YSort/Kinetic" index="0" instance=ExtResource( 5 )]
+[node name="Porcupine3" parent="YSort/Kinetic" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 1216.59, 755.083 )
 collision_mask = 1
 
-[node name="Porcupine4" parent="YSort/Kinetic" index="1" instance=ExtResource( 5 )]
+[node name="Porcupine4" parent="YSort/Kinetic" index="1" instance=ExtResource( 6 )]
 
-position = Vector2( 1221.02, 526.828 )
+position = Vector2( 1019.3, 871.704 )
 collision_mask = 1
 
-[node name="Npc" parent="YSort/Kinetic" index="2" instance=ExtResource( 6 )]
+[node name="Npc" parent="YSort/Kinetic" index="2" instance=ExtResource( 7 )]
 
-position = Vector2( 883.303, 911.943 )
+position = Vector2( 932.106, 365.347 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Dummy1" parent="YSort/Kinetic" index="3" instance=ExtResource( 7 )]
+[node name="Dummy1" parent="YSort/Kinetic" index="3" instance=ExtResource( 8 )]
 
 position = Vector2( 469.155, 586.444 )
 
-[node name="Dummy2" parent="YSort/Kinetic" index="4" instance=ExtResource( 7 )]
+[node name="Dummy2" parent="YSort/Kinetic" index="4" instance=ExtResource( 8 )]
 
 position = Vector2( 270.517, 185.744 )
 
-[node name="Dummy4" parent="YSort/Kinetic" index="5" instance=ExtResource( 7 )]
+[node name="Dummy4" parent="YSort/Kinetic" index="5" instance=ExtResource( 8 )]
 
 position = Vector2( -19.4081, 949.165 )
 
-[node name="Dummy5" parent="YSort/Kinetic" index="6" instance=ExtResource( 7 )]
+[node name="Dummy5" parent="YSort/Kinetic" index="6" instance=ExtResource( 8 )]
 
 position = Vector2( 2342.96, -583.8 )
 
-[node name="Dummy6" parent="YSort/Kinetic" index="7" instance=ExtResource( 7 )]
+[node name="Dummy6" parent="YSort/Kinetic" index="7" instance=ExtResource( 8 )]
 
 position = Vector2( 1925.14, 498.433 )
 
-[node name="Dummy7" parent="YSort/Kinetic" index="8" instance=ExtResource( 7 )]
+[node name="Dummy7" parent="YSort/Kinetic" index="8" instance=ExtResource( 8 )]
 
 position = Vector2( 380.557, -607.773 )
 
-[node name="Dummy9" parent="YSort/Kinetic" index="9" instance=ExtResource( 7 )]
+[node name="Dummy9" parent="YSort/Kinetic" index="9" instance=ExtResource( 8 )]
 
 position = Vector2( 1027.84, -196.799 )
 
-[node name="Dummy8" parent="YSort/Kinetic" index="10" instance=ExtResource( 7 )]
+[node name="Dummy8" parent="YSort/Kinetic" index="10" instance=ExtResource( 8 )]
 
 position = Vector2( -95.4883, -1296.16 )
 
-[node name="Dummy3" parent="YSort/Kinetic" index="11" instance=ExtResource( 7 )]
+[node name="Dummy3" parent="YSort/Kinetic" index="11" instance=ExtResource( 8 )]
 
 position = Vector2( 781.926, 596.218 )
 
-[node name="DummyTest" parent="YSort/Kinetic" index="12" instance=ExtResource( 8 )]
+[node name="DummyTest" parent="YSort/Kinetic" index="12" instance=ExtResource( 9 )]
 
 [node name="UI" type="CanvasLayer" parent="." index="3"]
 
@@ -223,7 +245,28 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 _sections_unfolded = [ "Rect" ]
 
+[node name="Sprite" type="Sprite" parent="." index="4"]
 
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Interact" type="Node2D" parent="Sprite" index="1"]
+
+
+[editable path="YSort/Player/Camera2D2/dialoguebox"]
