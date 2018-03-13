@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://characters/dummies.gd" type="Script" id=2]
+[ext_resource path="res://characters/monster/porcupine.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 45.9769, 37.6985 )
+
+[node name="Porcupine" instance=ExtResource( 1 )]
+
+collision_layer = 2
+collision_mask = 9
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="3"]
+
+position = Vector2( 0, -25.933 )
+shape = SubResource( 1 )
+
+[node name="BodyPivot" parent="." index="4"]
+
+editor/display_folded = false
+
+[node name="Body" parent="BodyPivot" index="0"]
+
+texture = ExtResource( 3 )
+offset = Vector2( 0.341893, -29.0374 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="LifeBarPivot" parent="." index="7"]
+
+position = Vector2( 0, -110 )
+
+
