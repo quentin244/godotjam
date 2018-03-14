@@ -6,10 +6,10 @@ var currentChar =0
 const SPEED=0.1
 
 func _ready():
-	fixed_process(true)
+	set_physics_process(true)
 	pass
 
-func _fixed_process(delta):
+func _physics_process(delta):
 	if printing:
 		timer += delta
 		if timer > SPEED:
