@@ -60,7 +60,7 @@ var weapon = null
 func _ready():
 	_change_state(IDLE)
 	$AnimationPlayer.connect('animation_finished', self, '_on_AnimationPlayer_animation_finished')
-	#$Tween.connect('tween_completed', self, '_on_Tween_tween_completed')
+	$Tween.connect('tween_completed', self, '_on_Tween_tween_completed')
 	$Health.connect('health_changed', self, '_on_Health_health_changed')
 
 	for gap in get_tree().get_nodes_in_group('gap'):
@@ -155,7 +155,8 @@ func _physics_process(delta):
 				_change_state(BUMP)
 			if collider.is_in_group('character'):
 				take_damage(collider, 2)
-
+			if collider.is_in_group('trap'):
+				take_damage(collider, 2)
 	elif state == JUMP:
 		jump(delta)
 

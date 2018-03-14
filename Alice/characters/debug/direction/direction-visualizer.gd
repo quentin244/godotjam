@@ -39,8 +39,8 @@ func _on_Player_speed_updated(speed):
 	var start_scale = Vector2(arrow_start_scale, arrow_start_scale)
 	var target_scale = Vector2(arrow_target_scale, arrow_target_scale)
 
-	#$Tween.remove_all()
-	#$Tween.interpolate_property($Arrow, 'scale', start_scale, target_scale, arrow_scale_duration, Tween.TRANS_LINEAR, Tween.EASE_IN)
-	#$Tween.start()
+	$Tween.remove_all()
+	$Tween.interpolate_property($Arrow, 'scale', start_scale, target_scale, arrow_scale_duration, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	$Tween.start()
 
 	last_player_speed = speed

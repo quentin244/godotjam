@@ -3,6 +3,8 @@
 [ext_resource path="res://characters/player/pebble.gd" type="Script" id=1]
 [ext_resource path="res://characters/player/pebble.png" type="Texture" id=2]
 
+
+
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
@@ -17,15 +19,15 @@ collision/safe_margin = 0.08
 script = ExtResource( 1 )
 LIFETIME = 2.0
 
-[node name="pebble" type="Sprite" parent="." index="0"]
+[node name="pebble" type="Sprite" parent="."]
 
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 shape = SubResource( 1 )
 
-[node name="Timer" type="Timer" parent="." index="2"]
+[node name="Timer" type="Timer" parent="."]
 
 process_mode = 1
 wait_time = 1.0

@@ -3,15 +3,14 @@
 [ext_resource path="res://characters/debug/direction/direction-visualizer.gd" type="Script" id=1]
 [ext_resource path="res://characters/debug/direction/arrow.png" type="Texture" id=2]
 
+
 [node name="DirectionVisualizer" type="Position2D"]
 
-visible = false
 script = ExtResource( 1 )
 scale_range = Vector2( 0.5, 1 )
 
 [node name="Arrow" type="Sprite" parent="." index="0"]
 
-visible = false
 position = Vector2( 56.0362, -0.163977 )
 texture = ExtResource( 2 )
 offset = Vector2( 33.8244, -0.589883 )

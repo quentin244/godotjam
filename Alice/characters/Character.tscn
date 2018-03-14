@@ -263,7 +263,6 @@ playback/speed = 1.0
 
 [node name="Health" type="Node" parent="." index="2"]
 
-editor/display_folded = true
 script = ExtResource( 2 )
 max_health = 9
 
@@ -293,7 +292,6 @@ _sections_unfolded = [ "Visibility" ]
 
 [node name="WeaponPivot" type="Position2D" parent="." index="5"]
 
-editor/display_folded = true
 position = Vector2( 0, -40 )
 z_index = 2
 script = ExtResource( 4 )
