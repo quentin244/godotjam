@@ -4,13 +4,13 @@
 
 [node name="arbre1of" type="Sprite"]
 
-editor/display_folded = true
 position = Vector2( 139.673, 66.6536 )
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="0"]
 
-position = Vector2( -74.1557, 0 )
+position = Vector2( -1.98805, -0.487081 )
+scale = Vector2( 1.11735, 1.27199 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -21,8 +21,9 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0"]
 
-position = Vector2( 69.9498, -7.91099 )
+position = Vector2( -1.85893, -11.3682 )
+scale = Vector2( 0.876286, 0.893762 )
 build_mode = 0
-polygon = PoolVector2Array( -5.02571, 41.8856, -5.02571, 46.4656, -2.52751, 48.9638, 0.387062, 51.0457, 3.71801, 46.882, 7.46532, 41.8856, 2.05254, 38.1383, -2.11114, 38.1383 )
+polygon = PoolVector2Array( -11.332, 36.9182, -9.6161, 43.491, -12.4988, 48.4988, -9.06702, 51.8164, -1.72292, 53.3188, 11.7985, 54.1326, 15.3676, 42.1764, 7.26846, 32.3486, -7.21384, 30.6585 )
 
 

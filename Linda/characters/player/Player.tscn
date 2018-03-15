@@ -2,7 +2,7 @@
 
 [ext_resource path="res://characters/player/player.gd" type="Script" id=1]
 [ext_resource path="res://characters/health.gd" type="Script" id=2]
-[ext_resource path="res://characters/player/body.png" type="Texture" id=3]
+[ext_resource path="res://Tilemap/src/character_positioned.png" type="Texture" id=3]
 [ext_resource path="res://characters/weapon/weapon-pivot.gd" type="Script" id=4]
 [ext_resource path="res://characters/shadow.png" type="Texture" id=5]
 [ext_resource path="res://characters/player/pebble-spawner.gd" type="Script" id=6]
@@ -226,9 +226,9 @@ tracks/1/keys = {
 [sub_resource type="RectangleShape2D" id=6]
 
 custom_solver_bias = 0.0
-extents = Vector2( 30.5911, 26.3305 )
+extents = Vector2( 25.5454, 20.9566 )
 
-[node name="Player" type="KinematicBody2D" groups=[
+[node name="Player" type="KinematicBody2D" index="0" groups=[
 "character",
 ]]
 
@@ -265,7 +265,6 @@ playback/speed = 1.0
 
 [node name="Health" type="Node" parent="." index="2"]
 
-editor/display_folded = true
 script = ExtResource( 2 )
 max_health = 9
 
@@ -284,21 +283,19 @@ shape = SubResource( 6 )
 
 [node name="BodyPivot" type="Position2D" parent="." index="4"]
 
-editor/display_folded = true
 z_index = 2
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Body" type="Sprite" parent="BodyPivot" index="0"]
 
-position = Vector2( -3.95498, 7.61197 )
-scale = Vector2( 0.46751, 0.289502 )
+position = Vector2( -3.60343, 80.8135 )
+scale = Vector2( 1.30067, 1.53264 )
 texture = ExtResource( 3 )
 offset = Vector2( 0.335912, -58.7778 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="WeaponPivot" type="Position2D" parent="." index="5"]
 
-editor/display_folded = true
 position = Vector2( 0, -40 )
 z_index = 2
 script = ExtResource( 4 )
@@ -306,15 +303,15 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="WeaponSpawn" type="Position2D" parent="WeaponPivot" index="0"]
 
-position = Vector2( 80, 0 )
+position = Vector2( 14.784, 40.0309 )
 _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Shadow" type="Sprite" parent="." index="6"]
 
 self_modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
-position = Vector2( -3.73006, 4.88745 )
-scale = Vector2( 0.330185, 0.46433 )
+position = Vector2( -2.66953, 2.01145 )
+scale = Vector2( 0.322607, 0.423519 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Visibility" ]
 
@@ -331,11 +328,11 @@ _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Camera2D" type="Camera2D" parent="." index="9"]
 
-position = Vector2( -1.7818, 0 )
+position = Vector2( 2.45991, -3.18127 )
 scale = Vector2( 0.724094, 1 )
 anchor_mode = 1
 rotating = false
-current = false
+current = true
 zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000

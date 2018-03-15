@@ -7,6 +7,7 @@ func _input(event):
 	elif event.is_action_pressed("throw"):
 		$PebbleSpawner.spawn_pebble()
 	elif event.is_action_pressed("jump"):
+		print('Jump')
 		if not state in [IDLE, MOVE]:
 			return
 		_change_state(JUMP)
