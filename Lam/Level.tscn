@@ -12,6 +12,10 @@
 [ext_resource path="res://interface/Bars.gd" type="Script" id=10]
 [ext_resource path="res://jack.png" type="Texture" id=11]
 
+
+
+
+
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0

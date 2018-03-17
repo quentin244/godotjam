@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://energievie1.png" type="Texture" id=1]
+[ext_resource path="res://energievie2.png" type="Texture" id=2]
+[ext_resource path="res://energievie3.png" type="Texture" id=3]
+[ext_resource path="res://energievie4.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="AnimatedSprite" type="AnimatedSprite"]
+
+position = Vector2( 11.2172, 14.8096 )
+scale = Vector2( 0.864065, 0.864065 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 3
+playing = true
+
+

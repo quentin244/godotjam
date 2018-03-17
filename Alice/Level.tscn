@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://environment/tilesets/outdoor.tres" type="TileSet" id=1]
 [ext_resource path="res://environment/Pit.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://characters/monster/Dummy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://characters/monster/DummyTest.tscn" type="PackedScene" id=8]
 [ext_resource path="res://interface/Bars.gd" type="Script" id=9]
+[ext_resource path="res://vie.tscn" type="PackedScene" id=10]
 
 [node name="Level" type="Node2D" index="0"]
 
@@ -224,5 +225,11 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 9 )
 _sections_unfolded = [ "Rect" ]
+
+[node name="AnimatedSprite" parent="." index="4" instance=ExtResource( 10 )]
+
+position = Vector2( -4.71113, -127.431 )
+scale = Vector2( 4.94984, 4.94984 )
+frame = 3
 
 

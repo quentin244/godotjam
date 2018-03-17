@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/energievie1.png-2166f083102136b90f0aa28c144a071a.stex"
 
 [deps]
 
-source_file="res://icon.png"
-source_md5="af9e246f8c58d31e444e31563bf240b1"
+source_file="res://energievie1.png"
+source_md5="ee0625b22733acda4ac12ef4fdbdbb48"
 
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
-dest_md5="4212d71754d587fe298c59a6b04614be"
+dest_files=[ "res://.import/energievie1.png-2166f083102136b90f0aa28c144a071a.stex" ]
+dest_md5="1bf83de43200320068c72f38c86bfa50"
 
 [params]
 
