@@ -157,6 +157,11 @@ func _physics_process(delta):
 				take_damage(collider, 2)
 			if collider.is_in_group('trap'):
 				take_damage(collider, 2)
+			if collider.is_in_group('vies'):
+				$Health.take_damage(-2)
+				print("ok")
+				collider.queue_free()
+				#get_parent().get_parent().remove_child("VIES")
 	elif state == JUMP:
 		jump(delta)
 

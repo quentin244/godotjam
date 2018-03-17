@@ -134,6 +134,10 @@ func _change_state(new_state):
 			$Tween.stop(self, '')
 			$AnimationPlayer.play('die')
 		DEAD:
+			var coeur = StaticBody2D.new()
+			coeur = preload("res://VIES.tscn").instance()
+			get_tree().get_root().add_child(coeur)
+			coeur.global_translate(self.global_position)
 			queue_free()
 	state = new_state
 	emit_signal('state_changed', new_state)

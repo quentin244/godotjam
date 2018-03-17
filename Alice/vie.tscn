@@ -14,10 +14,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="AnimatedSprite" type="AnimatedSprite"]
+[node name="AnimatedSprite" type="AnimatedSprite" index="0" groups=[
+"vie",
+]]
 
-position = Vector2( 11.2172, 14.8096 )
-scale = Vector2( 0.864065, 0.864065 )
+position = Vector2( 54.9449, 63.3959 )
+scale = Vector2( 5.7227, 5.7227 )
 frames = SubResource( 1 )
 animation = "default"
 frame = 3
