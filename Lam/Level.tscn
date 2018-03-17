@@ -92,10 +92,10 @@ _sections_unfolded = [ "Limit", "Offset", "Smoothing", "Transform" ]
 [node name="dialoguebox" parent="YSort/Player/Camera2D2" index="0" instance=ExtResource( 4 )]
 
 visible = false
-margin_left = -927.0
-margin_top = 267.0
-margin_right = 965.0
-margin_bottom = 525.0
+margin_left = -940.0
+margin_top = 277.0
+margin_right = 952.0
+margin_bottom = 535.0
 
 [node name="RichTextLabel" parent="YSort/Player/Camera2D2/dialoguebox" index="0"]
 

@@ -2,9 +2,8 @@
 
 [ext_resource path="res://Tilemap/src/groche_8.png" type="Texture" id=1]
 
-[node name="groche_8" type="Sprite"]
+[node name="groche_8" type="Sprite" index="0"]
 
-editor/display_folded = true
 position = Vector2( 61.3976, 297.36 )
 texture = ExtResource( 1 )
 
@@ -21,6 +20,6 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -13.7845, 4.62189, -15.3942, 7.573, -12.4431, 9.85339, -9.7603, 10.5241, -10.0286, 14.1459, -4.26051, 16.4263, 1.23929, 13.0728, 7.54394, 11.4631, 10.3609, 7.70712, 11.7023, 6.36572, 15.19, 3.41461, 12.6413, 1.67078, 1.91, 1.26834, -3.99222, 1.26834, -11.37, 3.41461 )
+polygon = PoolVector2Array( -13.7845, 4.62189, -15.3942, 7.573, -12.4431, 9.85339, -12.0283, 11.7069, -12.4603, 14.5154, -7.16745, 17.1078, 3.31033, 17.4319, 10.9796, 13.8672, 15.5164, 7.92624, 16.0565, 6.30597, 15.19, 3.41461, 12.6413, 1.67078, 1.91, 1.26834, -3.99222, 1.26834, -11.37, 3.41461 )
 
 

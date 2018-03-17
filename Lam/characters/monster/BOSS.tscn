@@ -1,12 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://characters/player/player.gd" type="Script" id=1]
+[ext_resource path="res://characters/monster/BOSS.gd" type="Script" id=1]
 [ext_resource path="res://characters/health.gd" type="Script" id=2]
-[ext_resource path="res://characters/player/body.png" type="Texture" id=3]
+[ext_resource path="res://characters/monster/dummy.png" type="Texture" id=3]
 [ext_resource path="res://characters/weapon/weapon-pivot.gd" type="Script" id=4]
 [ext_resource path="res://characters/shadow.png" type="Texture" id=5]
-[ext_resource path="res://characters/player/pebble-spawner.gd" type="Script" id=6]
-[ext_resource path="res://characters/debug/direction/DirectionVisualizer.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Animation" id=1]
 
@@ -228,8 +226,9 @@ tracks/1/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 30.5911, 26.3305 )
 
-[node name="Player" type="KinematicBody2D" index="0" groups=[
+[node name="BOSS" type="KinematicBody2D" index="0" groups=[
 "character",
+"boss",
 ]]
 
 input_pickable = false
@@ -237,8 +236,7 @@ collision_layer = 1
 collision_mask = 10
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-_sections_unfolded = [ "Collision", "Pickable", "Z Index", "collision" ]
-knockback = 10
+_sections_unfolded = [ "Z Index" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
 
@@ -265,9 +263,8 @@ playback/speed = 1.0
 
 [node name="Health" type="Node" parent="." index="2"]
 
-editor/display_folded = true
 script = ExtResource( 2 )
-max_health = 9
+max_health = 5
 
 [node name="PoisonTimer" type="Timer" parent="Health" index="0"]
 
@@ -278,8 +275,7 @@ autostart = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( -3.64865, -8.33449 )
-scale = Vector2( 0.491065, 0.898614 )
+position = Vector2( -1, -51.8946 )
 shape = SubResource( 6 )
 
 [node name="BodyPivot" type="Position2D" parent="." index="4"]
@@ -289,15 +285,12 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="Body" type="Sprite" parent="BodyPivot" index="0"]
 
-position = Vector2( -3.95498, 7.61197 )
-scale = Vector2( 0.46751, 0.289502 )
 texture = ExtResource( 3 )
 offset = Vector2( 0.335912, -58.7778 )
 _sections_unfolded = [ "Visibility" ]
 
 [node name="WeaponPivot" type="Position2D" parent="." index="5"]
 
-editor/display_folded = true
 position = Vector2( 0, -40 )
 z_index = 2
 script = ExtResource( 4 )
@@ -312,51 +305,11 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 self_modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
-position = Vector2( -3.73006, 4.88745 )
-scale = Vector2( 0.330185, 0.46433 )
+position = Vector2( -0.32052, -4.20115 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Visibility" ]
 
-[node name="PebbleSpawner" type="Position2D" parent="." index="7"]
-
-position = Vector2( 0, -41.4124 )
-script = ExtResource( 6 )
-offset = 45
-
-[node name="DirectionVisualizer" parent="." index="8" instance=ExtResource( 7 )]
-
-show_behind_parent = true
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="Camera2D" type="Camera2D" parent="." index="9"]
-
-position = Vector2( -1.7818, 0 )
-scale = Vector2( 0.724094, 1 )
-anchor_mode = 1
-rotating = false
-current = true
-zoom = Vector2( 3, 3 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-_sections_unfolded = [ "Editor", "Offset" ]
-
-[node name="LifeBarPivot" type="Position2D" parent="." index="10"]
+[node name="LifeBarPivot" type="Position2D" parent="." index="7"]
 
 position = Vector2( 0, -166.567 )
 z_index = 1000

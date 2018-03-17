@@ -9,13 +9,13 @@ var bordsup = []
 var bordinf = []
 var bordG = []
 var bordD = []
-var used_cells = (preload("res://Lunch.tscn").instance()).get_child(0).get_used_cells()
+var used_cells = (preload("res://Tilemap/Map1.tscn").instance()).get_child(0).get_used_cells()
 var y1 = 0
 var y2
 var counter = 0
 
 func _ready():
-	add_child(preload("res://Tilemap/Final/World.tscn").instance())
+	add_child(preload("res://Tilemap/World.tscn").instance())
 	counter = 0
 	ajout(0,0,0,coin)
 	for i in range(1,taillem-1):
@@ -34,7 +34,7 @@ func _ready():
 	pass
 	
 func ajout(i,x,y,tab):
-	tab.append(preload("res://Lunch.tscn").instance())
+	tab.append(preload("res://Tilemap/Map3.tscn").instance())
 	child = Node2D.new()
 	child = tab[i]
 	add_child(child)
