@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://environment/map/assets/assets.tres" type="TileSet" id=1]
+[ext_resource path="res://environment/map/assets/aSSSets.tres" type="TileSet" id=1]
 [ext_resource path="res://environment/map/assets/sol/sol.tres" type="TileSet" id=2]
 
-[node name="assets" type="TileMap" index="0"]
+[node name="assets" type="TileMap"]
 
 mode = 0
 tile_set = ExtResource( 1 )

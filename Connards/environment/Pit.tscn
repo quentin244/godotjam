@@ -9,8 +9,8 @@ custom_solver_bias = 0.0
 extents = Vector2( 50.6151, 30.6767 )
 
 [node name="Gap" type="Area2D" groups=[
-"environment",
 "gap",
+"environment",
 ]]
 
 input_pickable = false
@@ -26,12 +26,15 @@ script = ExtResource( 1 )
 
 [node name="Gap" type="Sprite" parent="." index="0"]
 
-position = Vector2( 0, -36.0106 )
+position = Vector2( 0, -36.4078 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-position = Vector2( 0, -40.2276 )
+position = Vector2( -1.13746, -35.7425 )
+scale = Vector2( 0.229668, 0.230002 )
 shape = SubResource( 1 )
 
 

@@ -78,6 +78,7 @@ func _change_state(new_state):
 	match state:
 		FALL:
 			$CollisionShape2D.disabled = false
+			_change_state(DIE)
 		STAGGER:
 			$BodyPivot/Body.modulate = Color('#fff')
 		ATTACK:

@@ -12,9 +12,11 @@ func _ready():
 
 
 func _on_body_entered(body):
-	if not body.is_in_group('character'):
+	if not body.is_in_group('player'):
 		return
+	$maxresdefault.show()
 	overlapping_bodies_ids.append(body)
+	
 
 
 func _on_body_exited(body):
