@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Tilemap/Final/final.tres" type="TileSet" id=1]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" index="0"]
 
 position = Vector2( 401.312, 599.451 )
 z_index = -3

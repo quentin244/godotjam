@@ -5,17 +5,17 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10.9889, 10.7257 )
+extents = Vector2( 10.9889, 64.9233 )
 
-[node name="house2" type="Sprite"]
+[node name="house2" type="Sprite" index="0"]
 
-editor/display_folded = true
 position = Vector2( 271.505, 468.33 )
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="0"]
 
-position = Vector2( -193.629, 26.7784 )
+position = Vector2( -35.2383, -0.471558 )
+scale = Vector2( 1, 1 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -26,8 +26,10 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" index="0"]
 
-position = Vector2( 197.624, 40.7328 )
+position = Vector2( 39.801, 46.4098 )
 scale = Vector2( 5.20325, 1.2816 )
+z_as_relative = false
 shape = SubResource( 1 )
+_sections_unfolded = [ "Z Index" ]
 
 

@@ -2,8 +2,9 @@
 
 [ext_resource path="res://Tilemap/src/final.tres" type="TileSet" id=1]
 
+[node name="Node2D" type="Node2D"]
 
-[node name="Node2D" type="Node2D" index="0"]
+_sections_unfolded = [ "Z Index" ]
 
 [node name="TileMap" type="TileMap" parent="." index="0"]
 

@@ -9,16 +9,16 @@ var obj
 func _ready():
 	while (y1<taille*5-5):
 		if (y1<(taille*5-5)/2):
-			spawn(preload("res://arbre1.tscn").instance(),100)
+			spawn(preload("res://arbre1.tscn").instance(),10)
 		else:
 			spawn(preload("res://arbre1.tscn").instance(),10)
-		spawn(preload("res://arbre1of.tscn").instance(),0)
-		spawn(preload("res://autonne1.tscn").instance(),0)
-		spawn(preload("res://autonne2.tscn").instance(),0)
-		spawn(preload("res://groche_2.tscn").instance(),0)
-		spawn(preload("res://groche_4.tscn").instance(),0)
-		spawn(preload("res://groche_4.tscn").instance(),0)
-		spawn(preload("res://groche_1.tscn").instance(),0)
+		spawn(preload("res://arbre1of.tscn").instance(),10)
+		spawn(preload("res://autonne1.tscn").instance(),10)
+		spawn(preload("res://autonne2.tscn").instance(),5)
+		spawn(preload("res://groche_2.tscn").instance(),5)
+		spawn(preload("res://groche_4.tscn").instance(),5)
+		spawn(preload("res://groche_4.tscn").instance(),5)
+		spawn(preload("res://groche_1.tscn").instance(),5)
 		y1 = y1 + 0.01*8
 
 	pass
