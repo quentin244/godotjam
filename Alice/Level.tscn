@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://environment/tilesets/outdoor.tres" type="TileSet" id=1]
 [ext_resource path="res://environment/Pit.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://characters/monster/Dummy.tscn" type="PackedScene" id=7]
 [ext_resource path="res://characters/monster/DummyTest.tscn" type="PackedScene" id=8]
 [ext_resource path="res://interface/Bars.gd" type="Script" id=9]
+[ext_resource path="res://characters/npc/fourmis.tscn" type="PackedScene" id=10]
+[ext_resource path="res://characters/npc/rhinochat.tscn" type="PackedScene" id=11]
 
 [node name="Level" type="Node2D" index="0"]
 
@@ -47,6 +49,7 @@ sort_enabled = true
 
 [node name="Player" parent="YSort" index="0" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 position = Vector2( 900.71, 596.625 )
 z_index = 1
 collision_mask = 1
@@ -79,7 +82,6 @@ _sections_unfolded = [ "Limit", "Offset", "Smoothing", "Transform" ]
 
 [node name="Static" type="Node2D" parent="YSort" index="1"]
 
-editor/display_folded = true
 position = Vector2( 500.078, 491.455 )
 
 [node name="Rock2" parent="YSort/Static" index="0" instance=ExtResource( 4 )]
@@ -224,5 +226,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 9 )
 _sections_unfolded = [ "Rect" ]
+
+[node name="fourmis" parent="." index="4" instance=ExtResource( 10 )]
+
+position = Vector2( -325.32, -170.686 )
+
+[node name="KinematicBody2D" parent="." index="5" instance=ExtResource( 11 )]
+
+position = Vector2( -942.45, 275.669 )
+scale = Vector2( 1.66938, 1.66938 )
 
 

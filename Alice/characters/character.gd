@@ -35,7 +35,7 @@ var air_speed = 0
 var air_velocity = Vector2()
 var air_steering = Vector2()
 
-
+var dir
 var input_direction = Vector2()
 var look_direction = Vector2(1, 0)
 var last_move_direction = Vector2(1, 0)
@@ -141,7 +141,7 @@ func _change_state(new_state):
 
 func _physics_process(delta):
 	update_direction()
-
+	dir = input_direction
 	if state == IDLE and input_direction:
 		_change_state(MOVE)
 	elif state == MOVE:
@@ -157,6 +157,11 @@ func _physics_process(delta):
 				take_damage(collider, 2)
 			if collider.is_in_group('trap'):
 				take_damage(collider, 2)
+			if collider.is_in_group('vies'):
+				$Health.take_damage(-2)
+				print("ok")
+				collider.queue_free()
+				#get_parent().get_parent().remove_child("VIES")
 	elif state == JUMP:
 		jump(delta)
 

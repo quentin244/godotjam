@@ -1,6 +1,5 @@
 extends "res://characters/character.gd"
 
-
 func _input(event):
 	if event.is_action_pressed("attack") and not state in [ATTACK, JUMP]:
 		_change_state(ATTACK)

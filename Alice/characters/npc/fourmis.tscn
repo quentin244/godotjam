@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://characters/npc/fourmis.gd" type="Script" id=1]
+[ext_resource path="res://fourmis1.png" type="Texture" id=2]
+[ext_resource path="res://fourmis2.png" type="Texture" id=3]
+[ext_resource path="res://fourmis3.png" type="Texture" id=4]
+[ext_resource path="res://fourmis4.png" type="Texture" id=5]
+[ext_resource path="res://fourmis5.png" type="Texture" id=6]
+[ext_resource path="res://Tween.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Health.tscn" type="PackedScene" id=8]
+[ext_resource path="res://WeaponPivot.tscn" type="PackedScene" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.2
+} ]
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "walk"
+length = 1.0
+loop = false
+step = 0.1
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+position = Vector2( 167.999, 56.9998 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="Position2D" type="Position2D" parent="." index="0"]
+
+position = Vector2( 98.0668, 71.0669 )
+scale = Vector2( 6.0067, 6.0067 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Position2D" index="0"]
+
+position = Vector2( 1.18453, 0.458834 )
+frames = SubResource( 1 )
+animation = "default"
+frame = 4
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 53.338, 10.8469, 22.6146, 32.3045, 21.9996, 50.7484, 26.9996, 90.7482, 80.9994, 90.7482, 145.996, 105.943, 162.089, 104.48, 177.207, 80.0965, 184.034, 53.2745, 171.355, 36.2059, 156.237, 58.6389, 133.316, 41.5703 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("../Position2D/AnimatedSprite")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/walk = SubResource( 2 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Tween" parent="." index="3" instance=ExtResource( 7 )]
+
+[node name="Health" parent="." index="4" instance=ExtResource( 8 )]
+
+[node name="WeaponPivot" parent="." index="5" instance=ExtResource( 9 )]
+
+
