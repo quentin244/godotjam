@@ -4,7 +4,7 @@
 [ext_resource path="res://dialoguebox.gd" type="Script" id=2]
 [ext_resource path="res://VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=1]
 
 size = 50
 use_mipmaps = false
@@ -12,7 +12,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=2]
 
 size = 50
 use_mipmaps = false
@@ -28,7 +28,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=4]
 
 size = 50
 use_mipmaps = false
@@ -36,7 +36,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=5]
 
 size = 50
 use_mipmaps = false
@@ -44,7 +44,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Resource", "Settings" ]
 
-[node name="dialoguebox" type="NinePatchRect" index="0"]
+[node name="dialoguebox" type="NinePatchRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -81,11 +81,11 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/mono_font = SubResource( 5 )
-custom_fonts/bold_italics_font = SubResource( 4 )
+custom_fonts/mono_font = SubResource( 1 )
+custom_fonts/bold_italics_font = SubResource( 2 )
 custom_fonts/italics_font = SubResource( 3 )
-custom_fonts/bold_font = SubResource( 2 )
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/bold_font = SubResource( 4 )
+custom_fonts/normal_font = SubResource( 5 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 bbcode_enabled = false
 bbcode_text = ""
