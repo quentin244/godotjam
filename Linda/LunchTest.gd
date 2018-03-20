@@ -2,16 +2,15 @@ extends Node
 
 var obj
 var child
-var taillem = 5
-var scenes = []
-var coin = []
-var bordsup = []
-var bordinf = []
-var bordG = []
-var bordD = []
+var taillem = 4
+var scenes = [(preload("res://Tilemap/Map1.tscn").instance()),(preload("res://Tilemap/Map2.tscn").instance()), (preload("res://Tilemap/Map3.tscn").instance()), (preload("res://Tilemap/Map4.tscn").instance())]
+var coin = [(preload("res://Tilemap/MapNW.tscn").instance()),(preload("res://Tilemap/MapNE.tscn").instance()), (preload("res://Tilemap/MapSudWest.tscn").instance()), (preload("res://Tilemap/MapSudEst.tscn").instance())]
+var bordsup = [(preload("res://Tilemap/MapNord.tscn").instance()),(preload("res://Tilemap/MapNord.tscn").instance())]
+var bordinf = [(preload("res://Tilemap/MapSud.tscn").instance()), (preload("res://Tilemap/MapSud.tscn").instance())]
+var bordG = [(preload("res://Tilemap/Map1.tscn").instance()), (preload("res://Tilemap/MapWest.tscn").instance())]
+var bordD = [(preload("res://Tilemap/Map2.tscn").instance()), (preload("res://Tilemap/MapEst.tscn").instance())]
 var used_cells = (preload("res://Tilemap/Map1.tscn").instance()).get_child(0).get_used_cells()
 var y1 = 0
-var y2
 var counter = 0
 
 func _ready():
@@ -34,7 +33,6 @@ func _ready():
 	pass
 	
 func ajout(i,x,y,tab):
-	tab.append(preload("res://Tilemap/Map3.tscn").instance())
 	child = Node2D.new()
 	child = tab[i]
 	add_child(child)
