@@ -6,12 +6,12 @@ extends Node2D
 
 		
 func dial():
-	#get_node("Camera2D2/dialoguebox/RichTextLabel").set_hidden(false)
+	var point = get_node("/root/Level/YSort/Player/Camera2D2/dialogue")
 	get_node("dialoguebox/dialoguebox")._print_dialogue("Hello World ")
 	get_node("dialoguebox/dialoguebox").show()
-	var point = get_node("/root/level/YSort/Player/Camera2D2/dialogue")
 	
 func closdial():
+	get_node("dialoguebox/dialoguebox")._reset_dialogue()
 	get_node("dialoguebox/dialoguebox").hide()
 
 func _on_Area2D_body_entered( body ):

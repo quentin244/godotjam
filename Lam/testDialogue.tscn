@@ -12,3 +12,4 @@ _sections_unfolded = [ "Z Index" ]
 [node name="dialoguebox" parent="." index="0" instance=ExtResource( 2 )]
 
 
+[editable path="dialoguebox"]
