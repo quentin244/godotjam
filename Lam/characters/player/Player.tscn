@@ -232,6 +232,7 @@ extents = Vector2( 30.5911, 26.3305 )
 "player",
 ]]
 
+position = Vector2( -1, 0 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 10

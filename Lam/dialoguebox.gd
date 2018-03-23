@@ -1,4 +1,5 @@
 extends NinePatchRect
+
 var printing= false
 var timer = 0
 var textToPrint =""
@@ -20,6 +21,10 @@ func _physics_process(delta):
 			currentChar=0
 			textToPrint=""
 			timer =0	
+
 func _print_dialogue(text):
 	printing =true
 	textToPrint=text
+	
+func _reset_dialogue():
+	get_node("RichTextLabel").set_bbcode("")

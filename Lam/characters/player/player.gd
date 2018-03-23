@@ -25,17 +25,3 @@ func _physics_process(delta):
 		max_speed = MAX_RUN_SPEED
 	else:
 		max_speed = MAX_WALK_SPEED
-
-	if Input.is_action_pressed("dial"):
-		dial()
-	
-	if Input.is_action_pressed("close"):
-		closdial()
-		
-func dial():
-	#get_node("Camera2D2/dialoguebox/RichTextLabel").set_hidden(false)
-	get_node("Camera2D2/dialoguebox")._print_dialogue("Hello World ")
-	get_node("Camera2D2/dialoguebox").show()
-	
-func closdial():
-		get_node("Camera2D2/dialoguebox").hide()

@@ -3,8 +3,7 @@
 [ext_resource path="res://characters/debug/direction/direction-visualizer.gd" type="Script" id=1]
 [ext_resource path="res://characters/debug/direction/arrow.png" type="Texture" id=2]
 
-
-[node name="DirectionVisualizer" type="Position2D"]
+[node name="DirectionVisualizer" type="Position2D" index="0"]
 
 script = ExtResource( 1 )
 scale_range = Vector2( 0.5, 1 )
