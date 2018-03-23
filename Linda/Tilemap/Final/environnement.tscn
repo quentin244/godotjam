@@ -1,12 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Tilemap/Final/trees-and-bushes.png" type="Texture" id=1]
 [ext_resource path="res://Tilemap/Final/tree.png" type="Texture" id=2]
 [ext_resource path="res://Tilemap/Final/envirennement.png" type="Texture" id=3]
 [ext_resource path="res://Tilemap/Final/green.png" type="Texture" id=4]
-[ext_resource path="res://Tilemap/Final/terre.png" type="Texture" id=5]
+[ext_resource path="res://Tilemap/src/terre.png" type="Texture" id=5]
 [ext_resource path="res://Tilemap/Final/bidule.png" type="Texture" id=6]
 [ext_resource path="res://Tilemap/Final/roche.png" type="Texture" id=7]
+[ext_resource path="res://Tilemap/src/pixel.png" type="Texture" id=8]
+[ext_resource path="res://Tilemap/src/cheminAlice.png" type="Texture" id=9]
 
 [node name="Arbre" type="Node"]
 
@@ -163,5 +165,15 @@ position = Vector2( -103.201, -81.7711 )
 scale = Vector2( 1.25296, 1.1475 )
 build_mode = 0
 polygon = PoolVector2Array( -22.2219, -23.7221, 19.6229, -22.6587, 19.1681, 24.1344, -23.1316, 23.6027 )
+
+[node name="pixel" type="Sprite" parent="." index="7"]
+
+position = Vector2( 326.219, 108.282 )
+texture = ExtResource( 8 )
+
+[node name="cheminAlice" type="Sprite" parent="." index="8"]
+
+position = Vector2( 393.102, 109.017 )
+texture = ExtResource( 9 )
 
 

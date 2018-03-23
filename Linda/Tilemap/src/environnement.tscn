@@ -12,7 +12,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 31.4407, 29.9394 )
 
-[node name="Arbre" type="Node" index="0"]
+[node name="Arbre" type="Node"]
 
 [node name="trees-and-bushes" type="Sprite" parent="." index="0"]
 

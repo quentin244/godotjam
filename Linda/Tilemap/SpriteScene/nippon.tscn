@@ -2,11 +2,10 @@
 
 [ext_resource path="res://Tilemap/src/nippon.png" type="Texture" id=1]
 
-[node name="nippon" type="Sprite"]
+[node name="nippon" type="Sprite" index="0"]
 
-editor/display_folded = true
-position = Vector2( 660.823, 482.75 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
@@ -22,7 +21,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 2.06918, 3.95966, 0.574341, -1.27234, -7.43469, -5.3175, -17.3639, -1.27234, -15.8691, 5.45453, -13.7363, 10.0042, -8.17609, 11.3633, -2.36865, 9.50989 )
+polygon = PoolVector2Array( 5.82458, 3.06897, 0.574341, -1.27234, -7.3006, -2.21756, -17.3639, -1.27234, -18.7851, 6.89714, -20.9727, 18.564, -2.01407, 22.5744, 7.28293, 12.1837 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="1"]
 
@@ -38,6 +37,6 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( 2.06918, 3.95966, 0.574341, -1.27234, -7.43469, -5.3175, -17.3639, -1.27234, -15.8691, 5.45453, -13.7363, 10.0042, -8.17609, 11.3633, -2.36865, 9.50989 )
+polygon = PoolVector2Array( 3.72878, 3.66853, 0.574341, -1.27234, -7.20887, -2.16488, -17.3639, -1.27234, -20.6986, 6.03836, -21.9747, 19.3458, -17.7819, 21.3511, -4.65676, 21.8979, 4.09336, 21.1688, 5.91631, 14.6062 )
 
 

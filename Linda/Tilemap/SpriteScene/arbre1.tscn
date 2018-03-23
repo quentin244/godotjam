@@ -4,7 +4,6 @@
 
 [node name="autonne1" type="StaticBody2D"]
 
-position = Vector2( 199.41, 62.5338 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -12,21 +11,17 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-__meta__ = {
-"_edit_group_": true
-}
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -8.59485, 28.9342, -13.1749, 29.767, -12.7585, 33.9307, -14.8404, 36.8452, -11.093, 40.1762, -11.093, 44.3399, -5.2639, 47.2544, -1.5166, 43.0907, 3.89618, 46.4217, 10.1417, 44.7562, 10.1417, 41.4253, 14.7218, 40.1762, 15.1381, 33.0979, 10.9744, 28.1015, 5.56166, 28.9342, 3.06345, 27.2688, -1.10022, 28.9342, -6.09663, 24.7706 )
+polygon = PoolVector2Array( -8.59485, 28.9342, -13.2852, 25.0249, -16.1449, 31.0619, -19.0045, 34.557, -18.369, 38.0521, -13.9207, 50.1261, -12.6498, 53.9389, -4.0709, 59.0227, 11.8159, 57.7517, 20.7125, 51.7148, 16.8997, 44.0891, 18.1706, 36.7812, 15.1381, 33.0979, 11.4982, 26.2959, 5.56166, 28.9342, 3.06345, 27.2688, -1.52901, 28.2023, -6.09663, 24.7706 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="arbre1" type="Sprite" parent="CollisionPolygon2D" index="0"]
 
-position = Vector2( 1.34009, -8.70149 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+_sections_unfolded = [ "Offset", "Transform" ]
 
 

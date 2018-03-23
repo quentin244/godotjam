@@ -13,8 +13,8 @@ const BUMP_DURATION = 0.2
 const MAX_BUMP_HEIGHT = 50
 
 
-const JUMP_DURATION = 0.6
-const MAX_JUMP_HEIGHT = 80
+const JUMP_DURATION = 0.0
+const MAX_JUMP_HEIGHT = 00
 
 const AIR_ACCELERATION = 1000
 const AIR_DECCELERATION = 2000
@@ -61,17 +61,17 @@ func _ready():
 	_change_state(IDLE)
 	$AnimationPlayer.connect('animation_finished', self, '_on_AnimationPlayer_animation_finished')
 	#$Tween.connect('tween_completed', self, '_on_Tween_tween_completed')
-	$Health.connect('health_changed', self, '_on_Health_health_changed')
+	#$Health.connect('health_changed', self, '_on_Health_health_changed')
 
 	for gap in get_tree().get_nodes_in_group('gap'):
 		gap.connect('body_fell', self, '_on_Gap_body_fell')
 
 	if not weapon_path:
 		return
-	var weapon_instance = load(weapon_path).instance()
-	$WeaponPivot/WeaponSpawn.add_child(weapon_instance)
-	weapon = $WeaponPivot/WeaponSpawn.get_child(0)
-	weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
+	#var weapon_instance = load(weapon_path).instance()
+#	$WeaponPivot/WeaponSpawn.add_child(weapon_instance)
+	#weapon = $WeaponPivot/WeaponSpawn.get_child(0)
+	#weapon.connect("attack_finished", self, "_on_Weapon_attack_finished")
 
 
 func _change_state(new_state):

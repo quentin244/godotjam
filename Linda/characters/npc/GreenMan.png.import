@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/green.png-f51f331a6ef48a0de84563a48e42465c.stex"
+path="res://.import/GreenMan.png-3f71dcdd993cc1a5e9522ad35d70c652.stex"
 
 [deps]
 
-source_file="res://Tilemap/src/green.png"
-source_md5="cbc18f255dd1c86d3f366bc335760554"
+source_file="res://characters/npc/GreenMan.png"
+source_md5="4986587a9743453da7cb21444dafa5a3"
 
-dest_files=[ "res://.import/green.png-f51f331a6ef48a0de84563a48e42465c.stex" ]
-dest_md5="2e6dc397b7c741ea2511a8188e7445e0"
+dest_files=[ "res://.import/GreenMan.png-3f71dcdd993cc1a5e9522ad35d70c652.stex" ]
+dest_md5="909cea63d9d8bf78c51c14aadd2e50f1"
 
 [params]
 

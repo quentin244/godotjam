@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/green.png-f51f331a6ef48a0de84563a48e42465c.stex"
+path="res://.import/cheminAlice.png-7e25fc39f5fcbe7054c4ba86764184b2.stex"
 
 [deps]
 
-source_file="res://Tilemap/src/green.png"
-source_md5="cbc18f255dd1c86d3f366bc335760554"
+source_file="res://Tilemap/src/cheminAlice.png"
+source_md5="1be2f28dc39bae18cce25e88f56352e6"
 
-dest_files=[ "res://.import/green.png-f51f331a6ef48a0de84563a48e42465c.stex" ]
-dest_md5="2e6dc397b7c741ea2511a8188e7445e0"
+dest_files=[ "res://.import/cheminAlice.png-7e25fc39f5fcbe7054c4ba86764184b2.stex" ]
+dest_md5="e092873de734bc478fa7484c332603a6"
 
 [params]
 

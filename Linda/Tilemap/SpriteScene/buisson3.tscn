@@ -2,11 +2,10 @@
 
 [ext_resource path="res://Tilemap/src/buisson3.png" type="Texture" id=1]
 
-[node name="buisson3" type="Sprite"]
+[node name="buisson3" type="Sprite" index="0"]
 
-editor/display_folded = true
-position = Vector2( 459.755, 81.175 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
@@ -21,6 +20,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -9.54843, 22.9994, -9.68619, 26.4434, -6.5177, 25.7546, -4.58905, 27.4077, -0.869537, 29.3364, 1.05911, 28.0965, 4.2276, 28.0965, 7.39606, 27.27, 10.9778, 25.3413, 10.5645, 21.6218, 7.12054, 18.3156, 2.16119, 20.382, -0.869537, 17.3512, -2.93594, 19.4176, -9.68619, 16.2492, -12.8547, 20.6575 )
+polygon = PoolVector2Array( -22.4235, 20.1604, -21.46, 25.5035, -32.3521, 32.7232, -27.0757, 41.7684, -29.7295, 52.5386, -6.53707, 51.9489, 8.00732, 57.4522, 18.4243, 55.4868, 27.7983, 44.0297, 20.5835, 29.883, 18.9193, 22.3502, 10.5645, 21.6218, 7.12054, 18.3156, 2.16119, 20.382, -0.869537, 17.3512, -2.93594, 19.4176, -9.68619, 16.2492, -12.8547, 20.6575 )
+_sections_unfolded = [ "Transform" ]
 
 

@@ -4,12 +4,11 @@
 
 [node name="arbre1of" type="Sprite"]
 
-position = Vector2( 139.673, 66.6536 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." index="0"]
 
-position = Vector2( -1.98805, -0.487081 )
 scale = Vector2( 1.11735, 1.27199 )
 input_pickable = false
 collision_layer = 1
@@ -18,12 +17,13 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0"]
 
-position = Vector2( -1.85893, -11.3682 )
 scale = Vector2( 0.876286, 0.893762 )
 build_mode = 0
-polygon = PoolVector2Array( -11.332, 36.9182, -9.6161, 43.491, -12.4988, 48.4988, -9.06702, 51.8164, -1.72292, 53.3188, 11.7985, 54.1326, 15.3676, 42.1764, 7.26846, 32.3486, -7.21384, 30.6585 )
+polygon = PoolVector2Array( -16.028, 33.7935, -13.5734, 40.2866, -14.2747, 49.9506, -3.05374, 50.2526, 12.0245, 45.4206, 16.4077, 39.2295, 8.51795, 36.3606, 7.29066, 31.5285, 6.41402, 26.6965, 2.38147, 26.5455, -4.10566, 25.1865, -8.13821, 26.8475, -13.398, 28.2065 )
+_sections_unfolded = [ "Transform" ]
 
 

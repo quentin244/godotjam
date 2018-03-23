@@ -4,8 +4,8 @@
 
 [node name="groche_8" type="Sprite" index="0"]
 
-position = Vector2( 61.3976, 297.36 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
@@ -16,10 +16,12 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -13.7845, 4.62189, -15.3942, 7.573, -12.4431, 9.85339, -12.0283, 11.7069, -12.4603, 14.5154, -7.16745, 17.1078, 3.31033, 17.4319, 10.9796, 13.8672, 15.5164, 7.92624, 16.0565, 6.30597, 15.19, 3.41461, 12.6413, 1.67078, 1.91, 1.26834, -3.99222, 1.26834, -11.37, 3.41461 )
+polygon = PoolVector2Array( -13.7845, 4.62189, -15.3942, 7.573, -19.4752, 9.67494, -19.4752, 11.7749, -26.6751, 18.9748, -24.0501, 34.1247, -5.6003, 37.7997, 9.32455, 36.8247, 29.1994, 24.4498, 22.5244, 7.87495, 19.2245, 5.02498, 15.19, 3.41461, 12.6413, 1.67078, 1.91, 1.26834, -3.99222, 1.26834, -11.37, 3.41461 )
+_sections_unfolded = [ "Transform" ]
 
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/green.png-f51f331a6ef48a0de84563a48e42465c.stex"
+path="res://.import/devil.png-ab4401d717b82c47454f9dfb76bc4d14.stex"
 
 [deps]
 
-source_file="res://Tilemap/src/green.png"
-source_md5="cbc18f255dd1c86d3f366bc335760554"
+source_file="res://characters/npc/devil.png"
+source_md5="c27e10baa46335dca36c64b4f89ec179"
 
-dest_files=[ "res://.import/green.png-f51f331a6ef48a0de84563a48e42465c.stex" ]
-dest_md5="2e6dc397b7c741ea2511a8188e7445e0"
+dest_files=[ "res://.import/devil.png-ab4401d717b82c47454f9dfb76bc4d14.stex" ]
+dest_md5="898db791c2f84c622bb92a28b0562cfd"
 
 [params]
 

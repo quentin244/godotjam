@@ -4,9 +4,8 @@
 
 [node name="buisson2" type="Sprite"]
 
-editor/display_folded = true
-position = Vector2( 63.4575, 192.306 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
@@ -17,10 +16,12 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0"]
 
 build_mode = 0
-polygon = PoolVector2Array( -9.44458, 8.83928, -10.1572, 10.6209, -10.1572, 11.6899, -7.48476, 13.4716, -2.6743, 15.7877, 2.84882, 15.7877, 8.72829, 14.3624, 11.5789, 9.55196, 6.41213, 8.30479, 0.354515, 6.87947, -6.23761, 7.23579 )
+polygon = PoolVector2Array( -8.84691, 9.29919, -11.825, 9.29919, -12.7885, 11.2262, -13.314, 14.467, -10.5111, 16.1313, -14.1898, 20.4233, -11.4745, 25.7663, -7.97089, 26.905, -3.67893, 28.9196, 3.41594, 24.7152, 8.40863, 26.2919, 11.4743, 23.2262, 8.14566, 19.1969, 13.3137, 20.5985, 11.9121, 17.2699, 13.8391, 13.4159, 12.7004, 9.2116, 6.41213, 8.30479, 0.354515, 6.87947, -6.23761, 7.23579 )
+_sections_unfolded = [ "Transform" ]
 
 
