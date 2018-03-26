@@ -1,0 +1,129 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://environment/map/assets/assetsRoot.gd" type="Script" id=1]
+[ext_resource path="res://environment/map/assets/split/arbre1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://environment/map/assets/split/buisson2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://environment/map/assets/split/buissonf_37.tscn" type="PackedScene" id=4]
+[ext_resource path="res://environment/map/assets/split/groche_1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://environment/map/assets/split/groche_6.tscn" type="PackedScene" id=6]
+[ext_resource path="res://environment/map/assets/split/groche_7.tscn" type="PackedScene" id=7]
+[ext_resource path="res://environment/map/assets/split/sapin1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://environment/map/assets/split/sapin8.tscn" type="PackedScene" id=9]
+[ext_resource path="res://environment/map/assets/split/souche_6.tscn" type="PackedScene" id=10]
+[ext_resource path="res://environment/map/assets/split/souche_12.tscn" type="PackedScene" id=11]
+[ext_resource path="res://environment/map/assets/split/statue1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://environment/map/assets/split/scale.tscn" type="PackedScene" id=13]
+[ext_resource path="res://environment/map/assets/split/statue2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://environment/map/assets/split/vege_1.tscn" type="PackedScene" id=15]
+[ext_resource path="res://environment/map/assets/split/vege_10.tscn" type="PackedScene" id=16]
+[ext_resource path="res://environment/map/assets/split/vege_11.tscn" type="PackedScene" id=17]
+[ext_resource path="res://environment/map/assets/split/vege_12.tscn" type="PackedScene" id=18]
+[ext_resource path="res://environment/map/assets/split/vege_13.tscn" type="PackedScene" id=19]
+[ext_resource path="res://environment/map/assets/split/vege_14.tscn" type="PackedScene" id=20]
+[ext_resource path="res://environment/map/assets/split/vege_15.tscn" type="PackedScene" id=21]
+[ext_resource path="res://environment/map/assets/split/vege_16.tscn" type="PackedScene" id=22]
+[ext_resource path="res://environment/map/assets/split/vege_17.tscn" type="PackedScene" id=23]
+[ext_resource path="res://environment/map/assets/split/vege_18.tscn" type="PackedScene" id=24]
+[ext_resource path="res://environment/map/assets/split/vege_19.tscn" type="PackedScene" id=25]
+[ext_resource path="res://environment/map/assets/split/vege_2.tscn" type="PackedScene" id=26]
+[ext_resource path="res://environment/map/assets/split/vege_20.tscn" type="PackedScene" id=27]
+[ext_resource path="res://environment/map/assets/split/vege_3.tscn" type="PackedScene" id=28]
+[ext_resource path="res://environment/map/assets/split/vege_4.tscn" type="PackedScene" id=29]
+[ext_resource path="res://environment/map/assets/split/coinB.tscn" type="PackedScene" id=30]
+[ext_resource path="res://environment/map/assets/split/coinBD.tscn" type="PackedScene" id=31]
+[ext_resource path="res://environment/map/assets/split/coinBG.tscn" type="PackedScene" id=32]
+[ext_resource path="res://environment/map/assets/split/coinD.tscn" type="PackedScene" id=33]
+[ext_resource path="res://environment/map/assets/split/coinG.tscn" type="PackedScene" id=34]
+[ext_resource path="res://environment/map/assets/split/coinH.tscn" type="PackedScene" id=35]
+[ext_resource path="res://environment/map/assets/split/coinHD.tscn" type="PackedScene" id=36]
+[ext_resource path="res://environment/map/assets/split/coinHG.tscn" type="PackedScene" id=37]
+
+[node name="assetsRoot" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="png" type="Node2D" parent="." index="0"]
+
+[node name="arbre1" parent="png" index="0" instance=ExtResource( 2 )]
+
+[node name="buisson2" parent="png" index="1" instance=ExtResource( 3 )]
+
+[node name="buissonf_37" parent="png" index="2" instance=ExtResource( 4 )]
+
+[node name="groche_1" parent="png" index="3" instance=ExtResource( 5 )]
+
+[node name="groche_6" parent="png" index="4" instance=ExtResource( 6 )]
+
+[node name="groche_7" parent="png" index="5" instance=ExtResource( 7 )]
+
+[node name="sapin1" parent="png" index="6" instance=ExtResource( 8 )]
+
+[node name="sapin8" parent="png" index="7" instance=ExtResource( 9 )]
+
+[node name="souche_6" parent="png" index="8" instance=ExtResource( 10 )]
+
+[node name="souche_12" parent="png" index="9" instance=ExtResource( 11 )]
+
+[node name="statue1" parent="png" index="10" instance=ExtResource( 12 )]
+
+[node name="scale" parent="png" index="11" instance=ExtResource( 13 )]
+
+[node name="statue2" parent="png" index="12" instance=ExtResource( 14 )]
+
+[node name="vege" type="Node2D" parent="." index="1"]
+
+position = Vector2( -52.9268, -153.635 )
+
+[node name="vege_1" parent="vege" index="0" instance=ExtResource( 15 )]
+
+[node name="vege_10" parent="vege" index="1" instance=ExtResource( 16 )]
+
+[node name="vege_11" parent="vege" index="2" instance=ExtResource( 17 )]
+
+[node name="vege_12" parent="vege" index="3" instance=ExtResource( 18 )]
+
+[node name="vege_13" parent="vege" index="4" instance=ExtResource( 19 )]
+
+[node name="vege_14" parent="vege" index="5" instance=ExtResource( 20 )]
+
+[node name="vege_15" parent="vege" index="6" instance=ExtResource( 21 )]
+
+[node name="vege_16" parent="vege" index="7" instance=ExtResource( 22 )]
+
+[node name="vege_17" parent="vege" index="8" instance=ExtResource( 23 )]
+
+[node name="vege_18" parent="vege" index="9" instance=ExtResource( 24 )]
+
+[node name="vege_19" parent="vege" index="10" instance=ExtResource( 25 )]
+
+[node name="vege_2" parent="vege" index="11" instance=ExtResource( 26 )]
+
+[node name="vege_20" parent="vege" index="12" instance=ExtResource( 27 )]
+
+[node name="vege_3" parent="vege" index="13" instance=ExtResource( 28 )]
+
+[node name="vege_4" parent="vege" index="14" instance=ExtResource( 29 )]
+
+[node name="murs" type="Node2D" parent="." index="2"]
+
+position = Vector2( 11.0264, 94.8272 )
+z_index = 1
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+[node name="coinB" parent="murs" index="0" instance=ExtResource( 30 )]
+
+[node name="coinBD" parent="murs" index="1" instance=ExtResource( 31 )]
+
+[node name="coinBG" parent="murs" index="2" instance=ExtResource( 32 )]
+
+[node name="coinD" parent="murs" index="3" instance=ExtResource( 33 )]
+
+[node name="coinG" parent="murs" index="4" instance=ExtResource( 34 )]
+
+[node name="coinH" parent="murs" index="5" instance=ExtResource( 35 )]
+
+[node name="coinHD" parent="murs" index="6" instance=ExtResource( 36 )]
+
+[node name="coinHG" parent="murs" index="7" instance=ExtResource( 37 )]
+
+

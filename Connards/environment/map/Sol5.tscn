@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://environment/map/assets/sol/sol.tres" type="TileSet" id=1]
+
+[node name="Sol5" type="TileMap" index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 64 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 1, 0, 4, 2, 0, 5, 2, 0, 6, 2, 0, 7, 2, 0, 65536, 2, 0, 65537, 2, 0, 65538, 2, 0, 65539, 2, 0, 65540, 1, 0, 65541, 2, 0, 65542, 2, 0, 65543, 2, 0, 131072, 2, 0, 131073, 2, 0, 131074, 1, 0, 131075, 2, 0, 131076, 1, 0, 131077, 2, 0, 131078, 2, 0, 131079, 2, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 2, 0, 196612, 1, 0, 196613, 1, 0, 196614, 2, 0, 196615, 1, 0, 262144, 1, 0, 262145, 2, 0, 262146, 1, 0, 262147, 1, 0, 262148, 2, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 327680, 2, 0, 327681, 2, 0, 327682, 2, 0, 327683, 1, 0, 327684, 1, 0, 327685, 2, 0, 327686, 2, 0, 327687, 2, 0, 393216, 2, 0, 393217, 2, 0, 393218, 1, 0, 393219, 2, 0, 393220, 2, 0, 393221, 2, 0, 393222, 2, 0, 393223, 2, 0, 458752, 2, 0, 458753, 2, 0, 458754, 2, 0, 458755, 1, 0, 458756, 1, 0, 458757, 2, 0, 458758, 2, 0, 458759, 2, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
+

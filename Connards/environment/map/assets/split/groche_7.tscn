@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://environment/map/assets/png/groche_7.png" type="Texture" id=1]
+
+[node name="groche_7" type="Sprite"]
+
+position = Vector2( 127.668, 71.7809 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Offset" ]
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D6" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( 14.0885, 3.94159, 13.1696, 6.18766, 10.1579, 8.22954, 9.39215, 8.22954, 6.32933, 9.91409, 4.38954, 11.8539, 0.305779, 14.3041, -2.96123, 14.5083, -8.47431, 13.2832, -11.435, 11.4966, -13.7322, 10.4246, -14.702, 9.30153, -14.4468, 7.51488, -12.7623, 6.08556, -9.39316, 4.24787, -6.33034, 2.51227, -3.62485, 1.49133, 1.07149, 2.56332, 5.51257, 1.84866, 8.06493, 1.08295, 12.3529, 2.35913, 14.5479, 3.32903 )
+
+

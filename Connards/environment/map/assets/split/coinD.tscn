@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://environment/map/assets/coin/coinD.png" type="Texture" id=1]
+
+[node name="coinD" type="Sprite"]
+
+position = Vector2( -175.688, -18.3773 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Pickable", "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -13.8739, -15.699, -13.7454, 15.4011, -3.84995, 16.0436, -3.33588, -15.956 )
+
+

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://environment/map/assets/vege/vege_13.png" type="Texture" id=1]
+
+[node name="vege_13" type="Sprite"]
+
+position = Vector2( 562.104, 210.242 )
+texture = ExtResource( 1 )
+
+

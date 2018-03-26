@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://environment/map/assets/coin/coinHG.png" type="Texture" id=1]
+
+[node name="coinHG" type="Sprite"]
+
+position = Vector2( -162.456, -114.675 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D8" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -7.5213, -23.3207, -8.23328, 24.2397, 3.5856, 24.0973, 2.44644, 14.2719, 8.14227, 14.1295, 8.71187, -23.6055 )
+
+
