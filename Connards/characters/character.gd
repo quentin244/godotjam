@@ -5,8 +5,8 @@ signal state_changed
 signal direction_changed
 
 #MOTION
-const MAX_WALK_SPEED = 450
-const MAX_RUN_SPEED = 700
+const MAX_WALK_SPEED = 2450
+const MAX_RUN_SPEED = 400
 
 const BUMP_DISTANCE = 60
 const BUMP_DURATION = 0.2

@@ -1,35 +1,35 @@
 extends Node
 
-var obj
 var child
-var taillem = 3
-var scenes = [(preload("res://environment/map/Sol1.tscn").instance()),(preload("res://environment/map/Sol2.tscn").instance()), (preload("res://environment/map/Sol3.tscn").instance()), (preload("res://environment/map/Sol4.tscn").instance()), (preload("res://environment/map/Sol5.tscn").instance()), (preload("res://environment/map/Sol6.tscn").instance()), (preload("res://environment/map/Sol7.tscn").instance()), (preload("res://environment/map/Sol8.tscn").instance())]
-var used_cells = (preload("res://environment/map/Sol9.tscn").instance()).get_used_cells()
-var y1 = 0
-var counter = 0
+var taillem = 4
+var scenes = [(preload("res://environment/map/Sol1.tscn").instance()),(preload("res://environment/map/Sol2.tscn").instance()), (preload("res://environment/map/Sol3.tscn").instance()), (preload("res://environment/map/Sol4.tscn").instance()), (preload("res://environment/map/Sol5.tscn").instance()), (preload("res://environment/map/Sol6.tscn").instance()), (preload("res://environment/map/Sol7.tscn").instance()), (preload("res://environment/map/Sol8.tscn").instance()), (preload("res://environment/map/Sol9.tscn").instance())]
 
 func _ready():
+	prints("init",scenes.size(),"scenes")
 	add_child(preload("res://environment/map/assets/assetsRoot.tscn").instance())
-	counter = 0
-	ajout(0,0,scenes)
-	for i in range(1,taillem):
-		ajout(i,0,scenes)
-	ajout(taillem,0,scenes)
 	for x in range(1,taillem):
-		ajout(0,x,scenes)
 		for y in range(1,taillem):
-			ajout(y,x,scenes)
-			counter = counter + 1
-		ajout(taillem,x,scenes)
-	ajout(0,taillem,scenes)
-	for i in range(1,taillem):
-		ajout(i,taillem,scenes)
-	ajout(taillem,taillem,scenes)
+			prints("coor :",x," ",y)
+			ajout(x,y,scenes)
 	pass
+	prints("fin")
 	
 func ajout(x,y,tab):
+	aff(scenes)
 	child = Node2D.new()
-	child = tab[randi()%7+1]
+	prints("il y a",scenes.size(),"scenes")
+	var rng = randi()%scenes.size()+1
+	prints("rng",rng)
+	child = tab[rng-1]
 	add_child(child)
-	child.global_translate(child.map_to_world(Vector2(sqrt(used_cells.size()),sqrt(used_cells.size())))*(Vector2(x,y)))
-	
+	scenes.erase(child)
+	child.translate(Vector2(512*x,512*y))
+	prints("il y a",scenes.size(),"scenes")
+	prints("-------------------------")
+
+func aff(scn):
+	for i in range(0,scenes.size()):
+		prints(scn[i].get_name())
+
+
+

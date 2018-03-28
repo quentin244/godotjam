@@ -228,7 +228,7 @@ tracks/1/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 30.5911, 26.3305 )
 
-[node name="Player" type="KinematicBody2D" groups=[
+[node name="Player" type="KinematicBody2D" index="0" groups=[
 "player",
 ]]
 
@@ -331,7 +331,7 @@ position = Vector2( -0.427872, -14.4744 )
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 2, 2 )
+zoom = Vector2( 1, 1 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
