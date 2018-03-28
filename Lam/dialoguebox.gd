@@ -27,4 +27,7 @@ func _print_dialogue(text):
 	textToPrint=text
 	
 func _reset_dialogue():
+	currentChar=0
+	textToPrint =""
+	timer = 0
 	get_node("RichTextLabel").set_bbcode("")

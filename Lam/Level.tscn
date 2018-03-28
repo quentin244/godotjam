@@ -3,15 +3,15 @@
 [ext_resource path="res://environment/tilesets/outdoor.tres" type="TileSet" id=1]
 [ext_resource path="res://environment/Pit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://environment/Rock.tscn" type="PackedScene" id=4]
-[ext_resource path="res://characters/monster/Porcupine.tscn" type="PackedScene" id=5]
-[ext_resource path="res://characters/npc/Npc.tscn" type="PackedScene" id=6]
-[ext_resource path="res://characters/monster/Dummy.tscn" type="PackedScene" id=7]
-[ext_resource path="res://characters/monster/DummyTest.tscn" type="PackedScene" id=8]
-[ext_resource path="res://interface/Bars.gd" type="Script" id=9]
-[ext_resource path="res://jack.png" type="Texture" id=10]
-[ext_resource path="res://Sprite.gd" type="Script" id=11]
-[ext_resource path="res://testDialogue.tscn" type="PackedScene" id=12]
+[ext_resource path="res://testDialogue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://environment/Rock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://characters/monster/Porcupine.tscn" type="PackedScene" id=6]
+[ext_resource path="res://characters/npc/Npc.tscn" type="PackedScene" id=7]
+[ext_resource path="res://characters/monster/Dummy.tscn" type="PackedScene" id=8]
+[ext_resource path="res://characters/monster/DummyTest.tscn" type="PackedScene" id=9]
+[ext_resource path="res://interface/Bars.gd" type="Script" id=10]
+[ext_resource path="res://jack.png" type="Texture" id=11]
+[ext_resource path="res://Sprite.gd" type="Script" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -90,67 +90,85 @@ _sections_unfolded = [ "Limit", "Offset", "Smoothing", "Transform" ]
 
 position = Vector2( -265.292, 488.378 )
 
+[node name="dialoguebox" parent="YSort/Player/Camera2D2" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( -330.498, 225.841 )
+z_index = 4096
+z_as_relative = false
+_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
+
+[node name="dialoguebox" parent="YSort/Player/Camera2D2/dialoguebox" index="0"]
+
+visible = false
+margin_right = 845.0
+margin_bottom = 183.0
+
+[node name="RichTextLabel" parent="YSort/Player/Camera2D2/dialoguebox/dialoguebox" index="0"]
+
+margin_right = 825.0
+margin_bottom = 162.0
+
 [node name="Static" type="Node2D" parent="YSort" index="1"]
 
 editor/display_folded = true
 position = Vector2( 500.078, 491.455 )
 
-[node name="Rock2" parent="YSort/Static" index="0" instance=ExtResource( 4 )]
+[node name="Rock2" parent="YSort/Static" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( 1626.18, 262.87 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock8" parent="YSort/Static" index="1" instance=ExtResource( 4 )]
+[node name="Rock8" parent="YSort/Static" index="1" instance=ExtResource( 5 )]
 
 position = Vector2( 146.112, -308.974 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock9" parent="YSort/Static" index="2" instance=ExtResource( 4 )]
+[node name="Rock9" parent="YSort/Static" index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 1432.76, -372.046 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock10" parent="YSort/Static" index="3" instance=ExtResource( 4 )]
+[node name="Rock10" parent="YSort/Static" index="3" instance=ExtResource( 5 )]
 
 position = Vector2( 2084.5, 292.303 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock11" parent="YSort/Static" index="4" instance=ExtResource( 4 )]
+[node name="Rock11" parent="YSort/Static" index="4" instance=ExtResource( 5 )]
 
 position = Vector2( 57.8125, 1784.99 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock12" parent="YSort/Static" index="5" instance=ExtResource( 4 )]
+[node name="Rock12" parent="YSort/Static" index="5" instance=ExtResource( 5 )]
 
 position = Vector2( -261.748, -1183.56 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock13" parent="YSort/Static" index="6" instance=ExtResource( 4 )]
+[node name="Rock13" parent="YSort/Static" index="6" instance=ExtResource( 5 )]
 
 position = Vector2( -614.946, -1410.62 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock3" parent="YSort/Static" index="7" instance=ExtResource( 4 )]
+[node name="Rock3" parent="YSort/Static" index="7" instance=ExtResource( 5 )]
 
 position = Vector2( 262.678, 478.76 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock5" parent="YSort/Static" index="8" instance=ExtResource( 4 )]
+[node name="Rock5" parent="YSort/Static" index="8" instance=ExtResource( 5 )]
 
 position = Vector2( 497.823, 896.294 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock6" parent="YSort/Static" index="9" instance=ExtResource( 4 )]
+[node name="Rock6" parent="YSort/Static" index="9" instance=ExtResource( 5 )]
 
 position = Vector2( 1429.36, 870.669 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock7" parent="YSort/Static" index="10" instance=ExtResource( 4 )]
+[node name="Rock7" parent="YSort/Static" index="10" instance=ExtResource( 5 )]
 
 position = Vector2( 1124.88, 332.548 )
 scale = Vector2( 0.844736, 0.844736 )
 
-[node name="Rock4" parent="YSort/Static" index="11" instance=ExtResource( 4 )]
+[node name="Rock4" parent="YSort/Static" index="11" instance=ExtResource( 5 )]
 
 position = Vector2( 728.647, 263.79 )
 scale = Vector2( 0.844736, 0.844736 )
@@ -160,61 +178,62 @@ scale = Vector2( 0.844736, 0.844736 )
 position = Vector2( 555.062, 639.981 )
 _sections_unfolded = [ "Z Index" ]
 
-[node name="Porcupine3" parent="YSort/Kinetic" index="0" instance=ExtResource( 5 )]
+[node name="Porcupine3" parent="YSort/Kinetic" index="0" instance=ExtResource( 6 )]
 
 position = Vector2( 1216.59, 755.083 )
 collision_mask = 1
 
-[node name="Porcupine4" parent="YSort/Kinetic" index="1" instance=ExtResource( 5 )]
+[node name="Porcupine4" parent="YSort/Kinetic" index="1" instance=ExtResource( 6 )]
 
 position = Vector2( 1019.3, 871.704 )
 collision_mask = 1
 
-[node name="Npc" parent="YSort/Kinetic" index="2" instance=ExtResource( 6 )]
+[node name="Npc" parent="YSort/Kinetic" index="2" instance=ExtResource( 7 )]
 
 position = Vector2( 932.106, 365.347 )
 _sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="Dummy1" parent="YSort/Kinetic" index="3" instance=ExtResource( 7 )]
+[node name="Dummy1" parent="YSort/Kinetic" index="3" instance=ExtResource( 8 )]
 
 position = Vector2( 469.155, 586.444 )
 
-[node name="Dummy2" parent="YSort/Kinetic" index="4" instance=ExtResource( 7 )]
+[node name="Dummy2" parent="YSort/Kinetic" index="4" instance=ExtResource( 8 )]
 
 position = Vector2( 270.517, 185.744 )
 
-[node name="Dummy4" parent="YSort/Kinetic" index="5" instance=ExtResource( 7 )]
+[node name="Dummy4" parent="YSort/Kinetic" index="5" instance=ExtResource( 8 )]
 
 position = Vector2( -19.4081, 949.165 )
 
-[node name="Dummy5" parent="YSort/Kinetic" index="6" instance=ExtResource( 7 )]
+[node name="Dummy5" parent="YSort/Kinetic" index="6" instance=ExtResource( 8 )]
 
 position = Vector2( 2342.96, -583.8 )
 
-[node name="Dummy6" parent="YSort/Kinetic" index="7" instance=ExtResource( 7 )]
+[node name="Dummy6" parent="YSort/Kinetic" index="7" instance=ExtResource( 8 )]
 
 position = Vector2( 1925.14, 498.433 )
 
-[node name="Dummy7" parent="YSort/Kinetic" index="8" instance=ExtResource( 7 )]
+[node name="Dummy7" parent="YSort/Kinetic" index="8" instance=ExtResource( 8 )]
 
 position = Vector2( 380.557, -607.773 )
 
-[node name="Dummy9" parent="YSort/Kinetic" index="9" instance=ExtResource( 7 )]
+[node name="Dummy9" parent="YSort/Kinetic" index="9" instance=ExtResource( 8 )]
 
 position = Vector2( 1027.84, -196.799 )
 
-[node name="Dummy8" parent="YSort/Kinetic" index="10" instance=ExtResource( 7 )]
+[node name="Dummy8" parent="YSort/Kinetic" index="10" instance=ExtResource( 8 )]
 
 position = Vector2( -95.4883, -1296.16 )
 
-[node name="Dummy3" parent="YSort/Kinetic" index="11" instance=ExtResource( 7 )]
+[node name="Dummy3" parent="YSort/Kinetic" index="11" instance=ExtResource( 8 )]
 
 position = Vector2( 781.926, 596.218 )
 
-[node name="DummyTest" parent="YSort/Kinetic" index="12" instance=ExtResource( 8 )]
+[node name="DummyTest" parent="YSort/Kinetic" index="12" instance=ExtResource( 9 )]
 
 [node name="UI" type="CanvasLayer" parent="." index="3"]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -235,13 +254,13 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="Sprite" type="Sprite" parent="." index="4"]
 
-texture = ExtResource( 10 )
-script = ExtResource( 11 )
+texture = ExtResource( 11 )
+script = ExtResource( 12 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite" index="0"]
 
@@ -259,8 +278,8 @@ shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="Sprite/StaticBody2D" index="1"]
 
-position = Vector2( 2.14815, 3.11854 )
-scale = Vector2( 2.1681, 2.84828 )
+position = Vector2( 24.2961, 55.0956 )
+scale = Vector2( 4.05166, 1.224 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -271,34 +290,18 @@ audio_bus_name = "Master"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/StaticBody2D/Area2D" index="0"]
 
+position = Vector2( -11.8046, 19.7888 )
+scale = Vector2( 0.349704, 0.523116 )
 build_mode = 0
-polygon = PoolVector2Array( -64.6275, -37.2537, 77.1765, -38.6866, 60.8627, 29.6119, -65.2549, 34.8657 )
+polygon = PoolVector2Array( -89.2281, -102.748, -6.72671, -102.748, 133.106, -105.601, 135.903, 42.7765, -79.4398, 31.3629 )
 
 [node name="Interact" type="Node2D" parent="Sprite" index="1"]
-
-[node name="dialoguebox" parent="Sprite" index="2" instance=ExtResource( 12 )]
-
-position = Vector2( -327.093, 486.871 )
-z_index = 4096
-z_as_relative = false
-_sections_unfolded = [ "Material", "Pause", "Transform", "Visibility", "Z Index" ]
-
-[node name="dialoguebox" parent="Sprite/dialoguebox" index="0"]
-
-visible = false
-margin_right = 845.0
-margin_bottom = 183.0
-
-[node name="RichTextLabel" parent="Sprite/dialoguebox/dialoguebox" index="0"]
-
-margin_right = 825.0
-margin_bottom = 162.0
 
 [connection signal="body_entered" from="Sprite/StaticBody2D/Area2D" to="Sprite" method="_on_Area2D_body_entered"]
 
 [connection signal="body_exited" from="Sprite/StaticBody2D/Area2D" to="Sprite" method="_on_Area2D_body_exited"]
 
 
+[editable path="YSort/Player/Camera2D2/dialoguebox"]
+[editable path="YSort/Player/Camera2D2/dialoguebox/dialoguebox"]
 [editable path="YSort/Kinetic/Npc"]
-[editable path="Sprite/dialoguebox"]
-[editable path="Sprite/dialoguebox/dialoguebox"]
