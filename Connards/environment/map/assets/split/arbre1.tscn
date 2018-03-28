@@ -4,8 +4,8 @@
 
 [node name="arbre1" type="Sprite"]
 
-position = Vector2( 249.195, 138.459 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D1" type="StaticBody2D" parent="." index="0"]
 

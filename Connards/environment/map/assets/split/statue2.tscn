@@ -4,8 +4,8 @@
 
 [node name="statue2" type="Sprite"]
 
-position = Vector2( 302.251, 89.3467 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="." index="0"]
 

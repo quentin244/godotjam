@@ -4,7 +4,6 @@
 
 [node name="coinHD" type="Sprite"]
 
-position = Vector2( -76.4498, -105.118 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -23,5 +22,6 @@ _sections_unfolded = [ "Transform" ]
 
 build_mode = 0
 polygon = PoolVector2Array( -3.52734, -23.5889, -2.53057, 18.2756, -12.6407, 18.8452, -13.3527, 14.2885, -17.4822, 13.7189, -16.2006, -24.4433 )
+_sections_unfolded = [ "Transform" ]
 
 

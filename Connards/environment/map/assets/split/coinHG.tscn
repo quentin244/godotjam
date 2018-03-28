@@ -4,7 +4,6 @@
 
 [node name="coinHG" type="Sprite"]
 
-position = Vector2( -162.456, -114.675 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -23,5 +22,6 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 build_mode = 0
 polygon = PoolVector2Array( -7.5213, -23.3207, -8.23328, 24.2397, 3.5856, 24.0973, 2.44644, 14.2719, 8.14227, 14.1295, 8.71187, -23.6055 )
+_sections_unfolded = [ "Transform" ]
 
 

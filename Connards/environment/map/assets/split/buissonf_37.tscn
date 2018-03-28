@@ -4,8 +4,8 @@
 
 [node name="buissonf_37" type="Sprite"]
 
-position = Vector2( 292.572, 135.591 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." index="0"]
 

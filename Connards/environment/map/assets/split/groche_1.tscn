@@ -4,8 +4,8 @@
 
 [node name="groche_1" type="Sprite"]
 
-position = Vector2( 233.063, 51.3472 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." index="0"]
 

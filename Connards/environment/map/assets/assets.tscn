@@ -37,14 +37,16 @@
 [ext_resource path="res://environment/map/assets/coin/coinHD.png" type="Texture" id=35]
 [ext_resource path="res://environment/map/assets/coin/coinHG.png" type="Texture" id=36]
 
-[node name="assets" type="Node"]
+[node name="assets" type="Node" index="0"]
 
 [node name="png" type="Node2D" parent="." index="0"]
 
+_sections_unfolded = [ "Transform" ]
+
 [node name="arbre1" type="Sprite" parent="png" index="0"]
 
-position = Vector2( 249.195, 138.459 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D1" type="StaticBody2D" parent="png/arbre1" index="0"]
 
@@ -65,8 +67,8 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="buisson2" type="Sprite" parent="png" index="1"]
 
-position = Vector2( 276.44, 63.8942 )
 texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="png/buisson2" index="0"]
 
@@ -86,8 +88,8 @@ polygon = PoolVector2Array( -14.4374, 11.8046, -12.7446, 14.9594, -9.89761, 16.9
 
 [node name="buissonf_37" type="Sprite" parent="png" index="2"]
 
-position = Vector2( 292.572, 135.591 )
 texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="png/buissonf_37" index="0"]
 
@@ -107,8 +109,8 @@ polygon = PoolVector2Array( -8.89627, 4.88693, -7.85245, 6.16273, -5.9967, 7.554
 
 [node name="groche_1" type="Sprite" parent="png" index="3"]
 
-position = Vector2( 233.063, 51.3472 )
 texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="png/groche_1" index="0"]
 
@@ -128,8 +130,8 @@ polygon = PoolVector2Array( 13.9081, 0.638451, 14.1164, 3.06896, 10.5748, 3.9717
 
 [node name="groche_6" type="Sprite" parent="png" index="4"]
 
-position = Vector2( 180.366, 53.4981 )
 texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="png/groche_6" index="0"]
 
@@ -149,9 +151,8 @@ polygon = PoolVector2Array( 12.5874, -0.688114, 12.3367, 1.3174, 7.44827, 3.6989
 
 [node name="groche_7" type="Sprite" parent="png" index="5"]
 
-position = Vector2( 127.668, 71.7809 )
 texture = ExtResource( 6 )
-_sections_unfolded = [ "Offset" ]
+_sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="png/groche_7" index="0"]
 
@@ -171,8 +172,8 @@ polygon = PoolVector2Array( 14.0885, 3.94159, 13.1696, 6.18766, 10.1579, 8.22954
 
 [node name="sapin1" type="Sprite" parent="png" index="6"]
 
-position = Vector2( 110.461, 210.156 )
 texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="png/sapin1" index="0"]
 
@@ -192,8 +193,8 @@ polygon = PoolVector2Array( 17.8689, 14.3022, 19.125, 17.5471, 17.4503, 23.1996,
 
 [node name="sapin8" type="Sprite" parent="png" index="7"]
 
-position = Vector2( 196.498, 216.968 )
 texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D9" type="StaticBody2D" parent="png/sapin8" index="0"]
 
@@ -213,8 +214,8 @@ polygon = PoolVector2Array( -10.3072, 36.0314, -10.4017, 36.4092, -11.3464, 39.6
 
 [node name="souche_6" type="Sprite" parent="png" index="8"]
 
-position = Vector2( 295.44, 224.854 )
 texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D10" type="StaticBody2D" parent="png/souche_6" index="0"]
 
@@ -234,8 +235,8 @@ polygon = PoolVector2Array( 10.4054, -2.76373, 5.59036, -2.76373, 1.19403, -3.49
 
 [node name="souche_12" type="Sprite" parent="png" index="9"]
 
-position = Vector2( 326.987, 185.421 )
 texture = ExtResource( 10 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="png/souche_12" index="0"]
 
@@ -255,8 +256,8 @@ polygon = PoolVector2Array( 13.861, 1.23827, 13.4736, 3.56281, 9.59937, 7.24333,
 
 [node name="statue1" type="Sprite" parent="png" index="10"]
 
-position = Vector2( 341.685, 124.12 )
 texture = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="png/statue1" index="0"]
 
@@ -276,8 +277,8 @@ polygon = PoolVector2Array( 0.0769043, 3.76437, -0.300964, 3.48096, -2.56821, 4.
 
 [node name="scale" type="Sprite" parent="png" index="11"]
 
-position = Vector2( 325.787, 461.159 )
 texture = ExtResource( 12 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="png/scale" index="0"]
 
@@ -294,6 +295,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 build_mode = 0
 polygon = PoolVector2Array( -33.9091, -31.1558, -34.6211, -25.3175, -69.3658, -24.8903, -69.2234, -0.398163, 27.606, 0.0290222, 28.6028, 36.9096, 23.9037, 36.7672, 23.1918, 25.3755, -21.8055, 25.0908, -31.0612, 34.2041, -38.0386, 33.4921, -45.8704, 25.6603, -80.1879, 25.9451, -80.7575, -34.2885, -33.7667, -33.8613 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="png/scale/StaticBody2D" index="1"]
 
@@ -302,8 +304,8 @@ polygon = PoolVector2Array( 51.5286, 35.9129, 55.5157, 35.9129, 55.9429, 24.5212
 
 [node name="statue2" type="Sprite" parent="png" index="12"]
 
-position = Vector2( 302.251, 89.3467 )
 texture = ExtResource( 13 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D13" type="StaticBody2D" parent="png/statue2" index="0"]
 
@@ -323,92 +325,90 @@ polygon = PoolVector2Array( -1.53506, 1.07331, -3.11288, 3.12446, -2.32397, 4.70
 
 [node name="vege" type="Node2D" parent="." index="1"]
 
-position = Vector2( -52.9268, -153.635 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_1" type="Sprite" parent="vege" index="0"]
 
-position = Vector2( 521.522, 251.087 )
 texture = ExtResource( 14 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_10" type="Sprite" parent="vege" index="1"]
 
-position = Vector2( 518.886, 199.174 )
 texture = ExtResource( 15 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_11" type="Sprite" parent="vege" index="2"]
 
-position = Vector2( 518.886, 199.174 )
 texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_12" type="Sprite" parent="vege" index="3"]
 
-position = Vector2( 487, 195.485 )
 texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_13" type="Sprite" parent="vege" index="4"]
 
-position = Vector2( 562.104, 210.242 )
 texture = ExtResource( 18 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_14" type="Sprite" parent="vege" index="5"]
 
-position = Vector2( 539.177, 229.479 )
 texture = ExtResource( 19 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_15" type="Sprite" parent="vege" index="6"]
 
-position = Vector2( 556.57, 182.045 )
 texture = ExtResource( 20 )
+_sections_unfolded = [ "Offset", "Transform" ]
 
 [node name="vege_16" type="Sprite" parent="vege" index="7"]
 
-position = Vector2( 550.509, 155.166 )
 texture = ExtResource( 21 )
+_sections_unfolded = [ "Animation", "Transform" ]
 
 [node name="vege_17" type="Sprite" parent="vege" index="8"]
 
-position = Vector2( 444.574, 195.748 )
 texture = ExtResource( 22 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_18" type="Sprite" parent="vege" index="9"]
 
-position = Vector2( 491.744, 240.547 )
 texture = ExtResource( 23 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_19" type="Sprite" parent="vege" index="10"]
 
-position = Vector2( 472.77, 146.47 )
 texture = ExtResource( 24 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_2" type="Sprite" parent="vege" index="11"]
 
-position = Vector2( 512.825, 161.227 )
 texture = ExtResource( 25 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_20" type="Sprite" parent="vege" index="12"]
 
-position = Vector2( 515.988, 129.341 )
 texture = ExtResource( 26 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_3" type="Sprite" parent="vege" index="13"]
 
-position = Vector2( 461.175, 223.681 )
 texture = ExtResource( 27 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="vege_4" type="Sprite" parent="vege" index="14"]
 
-position = Vector2( 474.352, 169.396 )
 texture = ExtResource( 28 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="murs" type="Node2D" parent="." index="2"]
 
-position = Vector2( 11.0264, 94.8272 )
 z_index = 1
-_sections_unfolded = [ "Visibility", "Z Index" ]
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [node name="coinB" type="Sprite" parent="murs" index="0"]
 
-position = Vector2( 68.4958, -431.524 )
 z_index = 1
 texture = ExtResource( 29 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]
@@ -431,7 +431,6 @@ polygon = PoolVector2Array( -32.4375, -7.98282, 32.2522, -7.19391, 31.7789, 5.90
 
 [node name="coinBD" type="Sprite" parent="murs" index="1"]
 
-position = Vector2( 0.735107, 50.7215 )
 texture = ExtResource( 30 )
 _sections_unfolded = [ "Transform" ]
 
@@ -453,7 +452,6 @@ polygon = PoolVector2Array( -3.2196, -16.0548, -3.56063, -3.35141, -16.264, -2.9
 
 [node name="coinBG" type="Sprite" parent="murs" index="2"]
 
-position = Vector2( 99.9728, -84.5358 )
 texture = ExtResource( 31 )
 _sections_unfolded = [ "Transform" ]
 
@@ -475,7 +473,6 @@ polygon = PoolVector2Array( -7.864, -7.10832, -7.864, 6.10665, 7.99397, 5.85088,
 
 [node name="coinD" type="Sprite" parent="murs" index="3"]
 
-position = Vector2( -175.688, -18.3773 )
 texture = ExtResource( 32 )
 _sections_unfolded = [ "Transform" ]
 
@@ -497,7 +494,6 @@ polygon = PoolVector2Array( -13.8739, -15.699, -13.7454, 15.4011, -3.84995, 16.0
 
 [node name="coinG" type="Sprite" parent="murs" index="4"]
 
-position = Vector2( 26.4634, -122.761 )
 texture = ExtResource( 33 )
 _sections_unfolded = [ "Transform" ]
 
@@ -519,7 +515,6 @@ polygon = PoolVector2Array( 3.09274, -15.8723, 2.95385, 15.5159, -8.22648, 15.79
 
 [node name="coinH" type="Sprite" parent="murs" index="5"]
 
-position = Vector2( -156.575, 73.5094 )
 texture = ExtResource( 34 )
 _sections_unfolded = [ "Transform" ]
 
@@ -541,7 +536,6 @@ polygon = PoolVector2Array( 32.3265, -23.974, 31.8993, 13.9034, -33.4606, 14.045
 
 [node name="coinHD" type="Sprite" parent="murs" index="6"]
 
-position = Vector2( -76.4498, -105.118 )
 texture = ExtResource( 35 )
 _sections_unfolded = [ "Transform" ]
 
@@ -560,10 +554,10 @@ _sections_unfolded = [ "Transform" ]
 
 build_mode = 0
 polygon = PoolVector2Array( -3.52734, -23.5889, -2.53057, 18.2756, -12.6407, 18.8452, -13.3527, 14.2885, -17.4822, 13.7189, -16.2006, -24.4433 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="coinHG" type="Sprite" parent="murs" index="7"]
 
-position = Vector2( -162.456, -114.675 )
 texture = ExtResource( 36 )
 _sections_unfolded = [ "Transform" ]
 
@@ -582,5 +576,6 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 build_mode = 0
 polygon = PoolVector2Array( -7.5213, -23.3207, -8.23328, 24.2397, 3.5856, 24.0973, 2.44644, 14.2719, 8.14227, 14.1295, 8.71187, -23.6055 )
+_sections_unfolded = [ "Transform" ]
 
 

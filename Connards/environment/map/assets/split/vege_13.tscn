@@ -4,7 +4,7 @@
 
 [node name="vege_13" type="Sprite"]
 
-position = Vector2( 562.104, 210.242 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 

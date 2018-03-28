@@ -4,8 +4,8 @@
 
 [node name="sapin1" type="Sprite"]
 
-position = Vector2( 110.461, 210.156 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="." index="0"]
 

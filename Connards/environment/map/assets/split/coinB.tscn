@@ -4,7 +4,6 @@
 
 [node name="coinB" type="Sprite"]
 
-position = Vector2( 68.4958, -431.524 )
 z_index = 1
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Offset", "Transform", "Z Index" ]

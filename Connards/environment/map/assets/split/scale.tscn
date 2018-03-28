@@ -4,8 +4,8 @@
 
 [node name="scale" type="Sprite"]
 
-position = Vector2( 325.787, 461.159 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
 
@@ -22,6 +22,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 build_mode = 0
 polygon = PoolVector2Array( -33.9091, -31.1558, -34.6211, -25.3175, -69.3658, -24.8903, -69.2234, -0.398163, 27.606, 0.0290222, 28.6028, 36.9096, 23.9037, 36.7672, 23.1918, 25.3755, -21.8055, 25.0908, -31.0612, 34.2041, -38.0386, 33.4921, -45.8704, 25.6603, -80.1879, 25.9451, -80.7575, -34.2885, -33.7667, -33.8613 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" index="1"]
 

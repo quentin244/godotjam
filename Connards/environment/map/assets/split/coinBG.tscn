@@ -4,7 +4,6 @@
 
 [node name="coinBG" type="Sprite"]
 
-position = Vector2( 99.9728, -84.5358 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 

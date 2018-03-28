@@ -4,8 +4,8 @@
 
 [node name="souche_12" type="Sprite"]
 
-position = Vector2( 326.987, 185.421 )
 texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="StaticBody2D11" type="StaticBody2D" parent="." index="0"]
 
