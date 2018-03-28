@@ -37,7 +37,7 @@
 [ext_resource path="res://environment/map/assets/coin/coinHD.png" type="Texture" id=35]
 [ext_resource path="res://environment/map/assets/coin/coinHG.png" type="Texture" id=36]
 
-[node name="assets" type="Node" index="0"]
+[node name="assets" type="Node"]
 
 [node name="png" type="Node2D" parent="." index="0"]
 

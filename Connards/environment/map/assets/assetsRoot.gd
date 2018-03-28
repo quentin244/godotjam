@@ -10,14 +10,14 @@ func _ready():
 	while (y1<taille*5-5):
 		if (y1<(taille*5-5)/2):
 			spawn(preload("res://environment/map/assets/split/vege_10.tscn").instance(),10)
+			spawn(preload("res://environment/map/assets/split/vege_12.tscn").instance(),8)
+			spawn(preload("res://environment/map/assets/split/vege_13.tscn").instance(),7)
+		
 		else:
 			spawn(preload("res://environment/map/assets/split/vege_11.tscn").instance(),9)
-		spawn(preload("res://environment/map/assets/split/vege_12.tscn").instance(),8)
-		spawn(preload("res://environment/map/assets/split/vege_13.tscn").instance(),7)
-		spawn(preload("res://environment/map/assets/split/vege_14.tscn").instance(),6)
-		spawn(preload("res://environment/map/assets/split/vege_15.tscn").instance(),5)
+			spawn(preload("res://environment/map/assets/split/vege_14.tscn").instance(),6)
+			spawn(preload("res://environment/map/assets/split/vege_15.tscn").instance(),5)
 		spawn(preload("res://environment/map/assets/split/vege_16.tscn").instance(),4)
-		spawn(preload("res://environment/map/assets/split/vege_17.tscn").instance(),3)
 		spawn(preload("res://environment/map/assets/split/vege_18.tscn").instance(),2)
 		y1 = y1 + 0.01*8
 
