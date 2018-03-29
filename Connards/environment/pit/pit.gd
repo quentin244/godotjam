@@ -14,7 +14,7 @@ func _ready():
 func _on_body_entered(body):
 	if not body.is_in_group('player'):
 		return
-	$maxresdefault.show()
+	get_node("/root/Root/YSort/Player/Camera2D/maxresdefault").show()
 	overlapping_bodies_ids.append(body)
 	
 
