@@ -21,7 +21,10 @@ func _ready():
 			spawn(preload("res://environment/map/assets/split/vege/vege_18.tscn").instance(),6)
 			spawn(preload("res://environment/map/assets/split/png/souche_12.tscn").instance(),5)
 		spawn(preload("res://environment/map/assets/split/vege/vege_20.tscn").instance(),10)
+		spawn(preload("res://environment/map/assets/split/png/buisson2.tscn").instance(),7)
+		spawn(preload("res://environment/map/assets/split/png/sapin1.tscn").instance(),4)
 		spawn(preload("res://environment/map/assets/split/vege/vege_1.tscn").instance(),2)
+		spawn(preload("res://environment/map/assets/split/png/groche_1.tscn").instance(),2)
 		y = y + 0.01*8
 	pass
 

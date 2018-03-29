@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://characters/npc/Lam/npc/jack.png" type="Texture" id=1]
+[ext_resource path="res://characters/npc/Lam/npc/Sprite.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="Sprite" type="Sprite"]
+
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D" index="1"]
+
+position = Vector2( 24.2961, 55.0956 )
+scale = Vector2( 4.05166, 1.224 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D/Area2D" index="0"]
+
+position = Vector2( -11.8046, 19.7888 )
+scale = Vector2( 0.349704, 0.523116 )
+build_mode = 0
+polygon = PoolVector2Array( -89.2281, -102.748, -6.72671, -102.748, 133.106, -105.601, 135.903, 42.7765, -79.4398, 31.3629 )
+
+[node name="Interact" type="Node2D" parent="." index="1"]
+
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="body_exited" from="StaticBody2D/Area2D" to="." method="_on_Area2D_body_exited"]
+
+
