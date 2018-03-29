@@ -60,7 +60,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -0.32052, -4.20115 ) ]
+"values": [ Vector2( -2, 14 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Shadow:scale")
@@ -278,8 +278,8 @@ autostart = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 
-position = Vector2( -0.0450721, 14.7548 )
-scale = Vector2( 0.25354, 0.161907 )
+position = Vector2( 0.544704, -3.68723 )
+scale = Vector2( 0.307975, 0.876304 )
 shape = SubResource( 6 )
 
 [node name="BodyPivot" type="Position2D" parent="." index="4"]
@@ -309,7 +309,7 @@ _sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 self_modulate = Color( 1, 1, 1, 0.313726 )
 show_behind_parent = true
-position = Vector2( -4, 16 )
+position = Vector2( -2, 14 )
 scale = Vector2( 1e-05, 1e-05 )
 texture = ExtResource( 5 )
 _sections_unfolded = [ "Animation", "Offset", "Transform", "Visibility" ]

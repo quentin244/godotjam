@@ -17,19 +17,12 @@ func _ready():
 func ajout(x,y,tab):
 	aff(scenes)
 	child = Node2D.new()
-	prints("il y a",scenes.size(),"scenes")
 	var rng = randi()%scenes.size()+1
-	prints("rng",rng)
 	child = tab[rng-1]
 	add_child(child)
 	scenes.erase(child)
 	child.translate(Vector2(512*x,512*y))
-	prints("il y a",scenes.size(),"scenes")
-	prints("-------------------------")
 
 func aff(scn):
 	for i in range(0,scenes.size()):
 		prints(scn[i].get_name())
-
-
-

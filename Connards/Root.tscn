@@ -13,7 +13,7 @@
 [ext_resource path="res://characters/npc/Npc.tscn" type="PackedScene" id=11]
 [ext_resource path="res://interface/Bars.gd" type="Script" id=12]
 
-[node name="Root" type="Node"]
+[node name="Root" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -41,7 +41,9 @@ _sections_unfolded = [ "Cell", "Transform", "Z Index" ]
 
 [node name="YSort" type="YSort" parent="." index="1"]
 
+z_index = 1
 sort_enabled = true
+_sections_unfolded = [ "Z Index" ]
 
 [node name="Gap" parent="YSort" index="0" instance=ExtResource( 3 )]
 
@@ -52,13 +54,13 @@ _sections_unfolded = [ "Collision", "Transform", "Z Index" ]
 [node name="Sprite" parent="YSort" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 1717.59, 1736.6 )
-z_index = 2
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Player" parent="YSort" index="2" instance=ExtResource( 5 )]
 
 editor/display_folded = true
 position = Vector2( 1292.91, 1277.45 )
+z_index = -1
 _sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="Camera2D" type="Camera2D" parent="YSort/Player" index="10"]
@@ -119,6 +121,10 @@ position = Vector2( 835.698, 1243.01 )
 [node name="Npc" parent="YSort" index="5" instance=ExtResource( 11 )]
 
 position = Vector2( 1650.33, 814.63 )
+scale = Vector2( 0.3, 0.3 )
+z_index = -1
+z_as_relative = true
+_sections_unfolded = [ "Transform", "Z Index" ]
 
 [node name="UI" type="CanvasLayer" parent="." index="2"]
 
